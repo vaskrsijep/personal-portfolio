@@ -1,0 +1,44 @@
+"use client";
+import { useTransform, useViewportScroll, motion } from "framer-motion";
+import "./header.css";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useRef } from "react";
+import { ArrowDown } from "lucide-react";
+import gsap from "gsap";
+import MyExpertise from "../my-expertise/MyExpertise";
+export default function Header() {
+  const { scrollY } = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 500], [0, 0]);
+  const y2 = useTransform(scrollY, [0, 500], [0, -700]);
+
+  const [ref, inView, entry] = useInView({
+    threshold: 0.5,
+    triggerOnce: false,
+  });
+
+  const headerRef = useRef(null);
+  const handleScrollClick = () => {
+    gsap.to(headerRef, { scrollTo: 500, duration: 1 });
+  };
+
+  return (
+    <motion.div ref={headerRef} className="relative">
+      <div className="overlay bg-gradient-to-t from-[#161716] to-[#fff] z-0 absolute w-full h-screen opacity-5"></div>
+      <motion.div className="page-content flex items-center justify-center flex-col">
+        <h1 className="title-name">VASKRSIJE PANIC</h1>
+        <h1 className="title-grade">
+          Software Engineer, Front End & App Developer
+        </h1>
+        <div className="mt-10">
+          <span className="anim-down">
+            <ArrowDown
+              onClick={handleScrollClick}
+              className="text-[#c5fb45] animate-pulse border border-[#c5fb45] w-10 h-20 rounded-full cursor-pointer"
+            />
+          </span>
+        </div>
+      </motion.div>
+
+    </motion.div>
+  );
+}
