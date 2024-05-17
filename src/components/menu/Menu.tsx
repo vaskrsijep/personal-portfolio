@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import "./menu.css";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 
 export default function Menu() {
   const container = useRef(null);
@@ -90,7 +91,8 @@ export default function Menu() {
   ];
 
   return (
-    <div className="menu-container relative" ref={container}>
+    <div className="menu-container relative overflow-hidden" ref={container}>
+        
       <div className="menu-bar">
         <div className="menu-logo">
           <Link href="/">Vaskrsije Panic</Link>
@@ -113,7 +115,7 @@ export default function Menu() {
             {menuLinks.map((link, index) => (
               <div className="menu-link-item" key={index}>
                 <div className="menu-link-item-holder">
-                  <Link href={link.path} className="menu-link">
+                  <Link href={link.path} onClick={toggleMenu} className="menu-link">
                     {link.name}
                   </Link>
                 </div>
@@ -121,24 +123,24 @@ export default function Menu() {
             ))}
           </div>
         </div>
-        <div className="menu-info">
+        <div className="menu-info font-bold">
           <div className="menu-close-icon" onClick={toggleMenu}>
             <p>&times;</p>
           </div>
           <div className="menu-info-col">
             {menuInfos.map((info, index) => (
               <div className="menu-info-item" key={index}>
-                <a href={info.path} className="menu-info-link">
+                <a href={info.path} className="menu-info-link font-bold">
                   {info.name}
                 </a>
               </div>
             ))}
           </div>
-          <div className="menu-info-col">
+          <div className="menu-info-col font-bold">
             <p>panicvaskrsije@gmail.com</p>
             <p>+381 63 73 60 728</p>
           </div>
-          <div className="menu-preview">
+          <div className="menu-preview font-bold">
             <p>View Showreel</p>
           </div>
         </div>

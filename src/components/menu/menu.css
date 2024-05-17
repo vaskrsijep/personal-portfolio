@@ -53,7 +53,7 @@
 }
 
 .menu-copy {
-    flex: 4;
+    flex: 2;
     display: flex;
     justify-content: center;
     padding-top: 2em;
@@ -88,7 +88,7 @@
 .menu-link-item-holder a {
     color: #000;
     font-size: 90px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 90%;
 }
@@ -101,6 +101,7 @@
     width: 100%;
     align-items: end;
     gap: 10px;
+    font-weight:bold;
 }
 
 .menu-info-col {
