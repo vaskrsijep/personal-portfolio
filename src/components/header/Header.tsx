@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
 import { ArrowDown } from "lucide-react";
 import gsap from "gsap";
-import MyExpertise from "../my-expertise/MyExpertise";
+import AboutMe from "../about/AboutMe";
 export default function Header() {
   const { scrollY } = useViewportScroll();
   const y1 = useTransform(scrollY, [0, 500], [0, 0]);
@@ -24,21 +24,28 @@ export default function Header() {
   return (
     <motion.div ref={headerRef} className="relative">
       <div className="overlay bg-gradient-to-t from-[#161716] to-[#fff] z-0 absolute w-full h-screen opacity-5"></div>
-      <motion.div className="page-content flex items-center justify-center flex-col">
-        <h1 className="title-name">VASKRSIJE PANIC</h1>
-        <h1 className="title-grade">
+      <motion.div className="page-content flex items-center justify-center flex-col w-full h-screen gap-5">
+        <h1 className="text-9xl">VASKRSIJE PANIC</h1>
+        <h1 className="text-6xl leading-loose">
           Software Engineer, Front End & App Developer
         </h1>
-        <div className="mt-10">
-          <span className="anim-down">
+        {/* <div className="mt-10">
+          <span className="">
             <ArrowDown
               onClick={handleScrollClick}
               className="text-[#c5fb45] animate-pulse border border-[#c5fb45] w-10 h-20 rounded-full cursor-pointer"
             />
           </span>
-        </div>
+        </div> */}
       </motion.div>
+    <motion.div>
+      <motion.div>
+        <AboutMe />
+      </motion.div>
+      <motion.div>
 
+      </motion.div>
+    </motion.div>
     </motion.div>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
 import Menu from "@/components/menu/Menu";
+import SmoothScrolling from "@/components/SmoothScrolling";
 
 const inter = Lato({ 
   subsets: ["latin"],
@@ -25,7 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Menu />
+      <SmoothScrolling>
         {children}
+      </SmoothScrolling>
       </body>
     </html>
   );
