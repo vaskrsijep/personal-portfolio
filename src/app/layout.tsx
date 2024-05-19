@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
 import "./globals.css";
 import Menu from "@/components/menu/Menu";
 import SmoothScrolling from "@/components/SmoothScrolling";
+import {Poppins} from "next/font/google";
 
-const inter = Lato({ 
-  subsets: ["latin"],
-  weight: ["100", "300",  "400", "700", "900"],
-  variable: "--font-inter",
-  display: "swap",
+const poppins = Poppins({ weight: ["400", "700"], subsets: ["latin"] });
 
-});
+
 
 export const metadata: Metadata = {
   title: "Vaskrsije's Portfolio",
@@ -24,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppins.className}>
       <Menu />
       <SmoothScrolling>
         {children}

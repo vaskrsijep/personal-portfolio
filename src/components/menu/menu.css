@@ -101,7 +101,7 @@
     width: 100%;
     align-items: end;
     gap: 10px;
-    font-weight:bold;
+    color: #000;
 }
 
 .menu-info-col {

@@ -103,7 +103,7 @@ export default function Menu() {
       </div>
       <div className="menu-overlay">
         <div className="menu-overlay-bar">
-          <div className="menu-logo">
+          <div className="menu-logo text-black">
             <Link href="/">Vaskrsije Panic</Link>
           </div>
           <div className="menu-close" onClick={toggleMenu}>
@@ -123,24 +123,24 @@ export default function Menu() {
             ))}
           </div>
         </div>
-        <div className="menu-info font-bold">
+        <div className="menu-info  text-2xl">
           <div className="menu-close-icon" onClick={toggleMenu}>
             <p>&times;</p>
           </div>
           <div className="menu-info-col">
             {menuInfos.map((info, index) => (
               <div className="menu-info-item" key={index}>
-                <a href={info.path} className="menu-info-link font-bold">
+                <a href={info.path} className="menu-info-link ">
                   {info.name}
                 </a>
               </div>
             ))}
           </div>
-          <div className="menu-info-col font-bold">
+          <div className="menu-info-col ">
             <p>panicvaskrsije@gmail.com</p>
             <p>+381 63 73 60 728</p>
           </div>
-          <div className="menu-preview font-bold">
+          <div className="menu-preview ">
             <p>View Showreel</p>
           </div>
         </div>

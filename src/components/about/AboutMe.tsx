@@ -24,8 +24,17 @@ export default function MyExpertise() {
   ];
 
   const phrase = "Hello! I'm a 27-year-old software engineer based in the beautiful city of Novi Sad. With a passion for technology and creativity, I bring innovative ideas to life through both front-end and back-end development as a freelance full-stack developer.";
+  const phrase2 = "In addition to my technical skills, I am adept at design and video editing, ensuring a seamless and visually appealing user experience. My diverse skill set allows me to tackle a variety of projects, from building dynamic web applications to crafting engaging multimedia content.";
+  const phrase3 = "As a dedicated professional, I am constantly exploring new technologies and methodologies to stay at the forefront of the industry. My goal is to deliver exceptional results that exceed client expectations and make a lasting impact.";
+  const phrase4 = "Feel free to browse through my portfolio to see some of the exciting projects I have worked on. I look forward to the opportunity to collaborate and bring your ideas to life!";
   const description = useRef(null);
+  const description2 = useRef(null);
+  const description3= useRef(null);
+  const description4= useRef(null);
   const isInView = useInView(description);
+  const isInView2 = useInView(description2);
+  const isInView3 = useInView(description3);
+  const isInView4 = useInView(description4);
 
   const slideUpProjects = {
     initial: {
@@ -42,15 +51,14 @@ export default function MyExpertise() {
 }
 
   return (
-    <div>
-      <p className="text-center text-5xl font-bold">My Expertise</p>
+    <div className="flex px-10 md:px-20 md:py-20 py-10 gap-20 md:flex-row flex-col">
+      <p className="text-6xl font-bold">ABOUT ME</p>
       <div className="text-white">
         <div
-          ref={description}
-          className="flex justify-center md:px-20 md:py-20 py-10 px-5"
+          className="flex justify-center flex-col gap-20  px-5"
         >
-          <div className="flex relative gap-50">
-            <p className="md:text-5xl text-2xl font-normal">
+          <div ref={description} className="flex relative gap-50">
+            <p className="md:text-4xl text-2xl font-normal">
               {phrase?.split(" ").map((word, index) => {
                 return (
                   <span
@@ -61,6 +69,69 @@ export default function MyExpertise() {
                       variants={slideUpProjects}
                       custom={index}
                       animate={isInView ? "open" : "closed"}
+                      key={index}
+                    >
+                      {word}
+                    </motion.span>
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+          <div ref={description2} className="flex relative gap-50">
+            <p className="md:text-4xl text-2xl font-normal">
+              {phrase2?.split(" ").map((word, index) => {
+                return (
+                  <span
+                    key={index}
+                    className="relative overflow-hidden inline-flex md:mr-[15px] mr-3 leading-snug"
+                  >
+                    <motion.span
+                      variants={slideUpProjects}
+                      custom={index}
+                      animate={isInView2 ? "open" : "closed"}
+                      key={index}
+                    >
+                      {word}
+                    </motion.span>
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+          <div ref={description3} className="flex relative gap-50">
+            <p className="md:text-4xl text-2xl font-normal">
+              {phrase3?.split(" ").map((word, index) => {
+                return (
+                  <span
+                    key={index}
+                    className="relative overflow-hidden inline-flex md:mr-[15px] mr-3 leading-snug"
+                  >
+                    <motion.span
+                      variants={slideUpProjects}
+                      custom={index}
+                      animate={isInView3 ? "open" : "closed"}
+                      key={index}
+                    >
+                      {word}
+                    </motion.span>
+                  </span>
+                );
+              })}
+            </p>
+          </div>
+          <div ref={description4} className="flex relative gap-50">
+            <p className="md:text-4xl text-2xl font-normal">
+              {phrase4?.split(" ").map((word, index) => {
+                return (
+                  <span
+                    key={index}
+                    className="relative overflow-hidden inline-flex md:mr-[15px] mr-3 leading-snug"
+                  >
+                    <motion.span
+                      variants={slideUpProjects}
+                      custom={index}
+                      animate={isInView4 ? "open" : "closed"}
                       key={index}
                     >
                       {word}

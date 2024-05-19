@@ -23,10 +23,10 @@ export default function Header() {
 
   return (
     <motion.div ref={headerRef} className="relative">
-      <div className="overlay bg-gradient-to-t from-[#161716] to-[#fff] z-0 absolute w-full h-screen opacity-5"></div>
-      <motion.div className="page-content flex items-center justify-center flex-col w-full h-screen gap-5">
-        <h1 className="text-9xl">VASKRSIJE PANIC</h1>
-        <h1 className="text-6xl leading-loose">
+      <div className="overlay z-0 absolute w-full h-screen opacity-5 overflow-hidden"></div>
+      <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
+        <h1 className="md:text-9xl text-4xl ">VASKRSIJE PANIC</h1>
+        <h1 className="md:text-6xl leading-loose ">
           Software Engineer, Front End & App Developer
         </h1>
         {/* <div className="mt-10">

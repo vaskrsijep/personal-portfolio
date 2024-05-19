@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 const config = {
   darkMode: ["class"],
@@ -18,6 +19,15 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        degular: ["Degular", ...fontFamily.sans],
+        grandslang: ["Grand Slang", ...fontFamily.sans],
+        grandslangitalic: ["Grand Slang Italic", ...fontFamily.sans],
+        migraitalic: ["Migra Italic", ...fontFamily.sans],
+        migrabold: ["Migra Italic Extrabold", ...fontFamily.sans],
+        migra: ["Migra Extralight", ...fontFamily.sans],
+        freight: ["FreightDispPro", ...fontFamily.sans],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
