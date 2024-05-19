@@ -136,7 +136,7 @@ export default function Menu() {
               </div>
             ))}
           </div>
-          <div className="menu-info-col ">
+          <div className=" md:flex flex-col hidden">
             <p>panicvaskrsije@gmail.com</p>
             <p>+381 63 73 60 728</p>
           </div>

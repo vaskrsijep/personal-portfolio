@@ -27,6 +27,7 @@ export default function MyExpertise() {
   const phrase2 = "In addition to my technical skills, I am adept at design and video editing, ensuring a seamless and visually appealing user experience. My diverse skill set allows me to tackle a variety of projects, from building dynamic web applications to crafting engaging multimedia content.";
   const phrase3 = "As a dedicated professional, I am constantly exploring new technologies and methodologies to stay at the forefront of the industry. My goal is to deliver exceptional results that exceed client expectations and make a lasting impact.";
   const phrase4 = "Feel free to browse through my portfolio to see some of the exciting projects I have worked on. I look forward to the opportunity to collaborate and bring your ideas to life!";
+
   const description = useRef(null);
   const description2 = useRef(null);
   const description3= useRef(null);
@@ -55,7 +56,7 @@ export default function MyExpertise() {
       <p className="text-6xl font-bold">ABOUT ME</p>
       <div className="text-white">
         <div
-          className="flex justify-center flex-col gap-20  px-5"
+          className="flex justify-center flex-col gap-20  md:px-5"
         >
           <div ref={description} className="flex relative gap-50">
             <p className="md:text-4xl text-2xl font-normal">

@@ -29,14 +29,14 @@ export default function Header() {
         <h1 className="md:text-6xl leading-loose ">
           Software Engineer, Front End & App Developer
         </h1>
-        {/* <div className="mt-10">
+        <div className="mt-10">
           <span className="">
             <ArrowDown
               onClick={handleScrollClick}
               className="text-[#c5fb45] animate-pulse border border-[#c5fb45] w-10 h-20 rounded-full cursor-pointer"
             />
           </span>
-        </div> */}
+        </div>
       </motion.div>
     <motion.div>
       <motion.div>
