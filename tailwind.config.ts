@@ -20,13 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        degular: ["Degular", ...fontFamily.sans],
-        grandslang: ["Grand Slang", ...fontFamily.sans],
-        grandslangitalic: ["Grand Slang Italic", ...fontFamily.sans],
-        migraitalic: ["Migra Italic", ...fontFamily.sans],
-        migrabold: ["Migra Italic Extrabold", ...fontFamily.sans],
-        migra: ["Migra Extralight", ...fontFamily.sans],
-        freight: ["FreightDispPro", ...fontFamily.sans],
+        mitera: ['Mitera', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

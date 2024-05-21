@@ -3,55 +3,20 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Degular";
-  src: url("/public/fonts/degular/Degular-Regular.otf");
-
-  font-display: swap;
-}
-@font-face {
-  font-family: "Grand Slang";
-  src: url("/public/fonts/grand-slang/GrandSlang-B-Side.ttf");
-
-  font-display: swap;
-}
-@font-face {
-  font-family: "Grand Slang Italic";
-  src: url("/public/fonts/grand-slang/GrandSlang-Italic.ttf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Migra Italic";
-  src: url("/public/fonts/migra/MigraItalicExtralightItalic200.otf");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Migra Italic Extrabold";
-  src: url("/public/fonts/migra/MigraItalicExtraboldItalic800.otf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Migra Extralight";
-  src: url("/public/fonts/migra/MigraExtralight200.otf");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "FreightDispPro";
-  src: url("/public/fonts/FreightDispProSemibold-Regular.ttf");
-  font-display: swap;
+  font-family: 'Mitera';
+  src: url('/public/fonts/MiteraRegular.ttf');
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
+  -webkit-font-smoothing: antialiased;}
 
 body {
   background-color: #000;
   color: #fff;
+  font-family: 'Mitera', sans-serif;
 }
 
 ::-webkit-scrollbar {

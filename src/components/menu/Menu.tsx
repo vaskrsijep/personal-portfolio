@@ -97,6 +97,12 @@ export default function Menu() {
         <div className="menu-logo">
           <Link href="/">Vaskrsije Panic</Link>
         </div>
+        <div className="fixed left-[2em] bottom-[2em]">
+          <p>Based in Novi Sad</p>
+        </div>
+        <div className="fixed right-[2em] bottom-[2em]">
+          <p>Available for hire</p>
+        </div>
         <div className="menu-open" onClick={toggleMenu}>
           <p>Menu</p>
         </div>
@@ -115,7 +121,7 @@ export default function Menu() {
             {menuLinks.map((link, index) => (
               <div className="menu-link-item" key={index}>
                 <div className="menu-link-item-holder">
-                  <Link href={link.path} onClick={toggleMenu} className="menu-link">
+                  <Link href={link.path} onClick={toggleMenu} className="menu-link font-bold">
                     {link.name}
                   </Link>
                 </div>
@@ -136,7 +142,7 @@ export default function Menu() {
               </div>
             ))}
           </div>
-          <div className=" md:flex flex-col hidden">
+          <div className="flex-col md:flex md:flex-auto hidden">
             <p>panicvaskrsije@gmail.com</p>
             <p>+381 63 73 60 728</p>
           </div>
