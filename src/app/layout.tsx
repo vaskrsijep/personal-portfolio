@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react"
 const abril = Abril_Fatface({ weight: ["400"], subsets: ["latin"] });
 const quicksand = Quicksand({ weight: ["400", "300", "500", "700", "600"], subsets: ["latin"], display: "swap" });
 const oswald = Oswald({ weight: ["400", "700", "200", "300", "500", "600"], subsets: ["latin"], display: "swap" });
+
 export const metadata: Metadata = {
   title: "Vaskrsije's Portfolio",
   description: "Vaskrsije's Portfolio",
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       
-      <body className={quicksand.className}>
+      <body className={oswald.className}>
       <Analytics/>
       <Menu />
       <SmoothScrolling>

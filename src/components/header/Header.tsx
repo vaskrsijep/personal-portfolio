@@ -26,7 +26,7 @@ export default function Header() {
       <div className="overlay z-0 absolute w-full h-screen opacity-5 overflow-hidden"></div>
       <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
         <h1 className="md:text-9xl font-bold ">VASKRSIJE PANIC</h1>
-        <h1 className="md:text-6xl leading-loose ">
+        <h1 className="md:text-6xl leading-loose opacity-50">
           Software Engineer, Front End & App Developer
         </h1>
         <div className="mt-10">
