@@ -5,3 +5,15 @@
     width: 100%;
     height: 100%;
 }
+
+.scaleAnim {
+    transform: scale(1.2, 2);
+    line-height: calc(100vh / 3);
+}
+
+@media (max-width: 900px) {
+    .scaleAnim {
+        transform: scale(1, 1);
+        line-height: calc(100vh / 20);
+    }
+}

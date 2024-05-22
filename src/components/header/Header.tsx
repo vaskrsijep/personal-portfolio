@@ -27,33 +27,33 @@ export default function Header() {
       <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
         {/* <h1 className="md:text-9xl font-bold leading-loose">VASKRSIJE PANIC</h1>
          */}
-        <div className="flex items-center justify-between md:gap-5 gap-1 font-bold text-5xl md:text-9xl">
-          <span>V</span>
-          <span>A</span>
-          <span>S</span>
-          <span>K</span>
-          <span>R</span>
-          <span>S</span>
-          <span>I</span>
-          <span>J</span>
-          <span>E</span>
-          <span></span>
-          <span>P</span>
-          <span>A</span>
-          <span>N</span>
-          <span>I</span>
-          <span>C</span>
+        <div className="flex items-center justify-between md:gap-5 gap-1 font-bold text-5xl md:text-9xl scaleAnim">
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>V</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>A</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>S</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>K</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>R</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>S</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>I</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>J</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>E</motion.span>
+          <span className="mx-2"></span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>P</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>A</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>N</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>I</motion.span>
+          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>C</motion.span>
         </div>
-        <h1 className="md:text-6xl text-2xl leading-loose opacity-50 font-thin">
+        <motion.h1 initial={{opacity: 0, y: 50}}  whileInView={{opacity: 1, y:0}} transition={{duration: 1}} className="md:text-6xl text-2xl leading-loose opacity-50 font-thin">
           Software Engineer, Front End & App Developer
-        </h1>
+        </motion.h1>
         <div className="mt-10">
-          <span className="">
+          <motion.span initial={{opacity: 0}}  whileInView={{opacity: 1}} transition={{duration: 1}} className="">
             <ArrowDown
               onClick={handleScrollClick}
               className="text-[#c5fb45] animate-pulse border border-[#c5fb45] w-10 h-20 rounded-full cursor-pointer"
             />
-          </span>
+          </motion.span>
         </div>
       </motion.div>
       <motion.div>

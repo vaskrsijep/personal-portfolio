@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import "./projects.css";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import {motion} from 'framer-motion'
 export default function Projects() {
   const projects = [
     {
@@ -32,13 +33,13 @@ export default function Projects() {
   ]
   return (
     <div>
-      <div className="p-[2em]">
+      <div className="p-[2em] py-[20em]">
         <div>
 
-        <h1 className="text-5xl font-bold uppercase">Just a projects:</h1>
+        <motion.h1 initial={{opacity: 0, y: 100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}} className="text-6xl flex font-bold uppercase">Just a projects:</motion.h1>
         </div>
         <div>
-          
+
         </div>
       
       </div>
