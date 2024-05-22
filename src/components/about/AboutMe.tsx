@@ -59,7 +59,7 @@ export default function MyExpertise() {
           className="flex justify-center flex-col gap-20  md:px-5"
         >
           <div ref={description} className="flex relative gap-50">
-            <p className="md:text-4xl text-2xl font-normal">
+            <p className="md:text-4xl text-2xl font-thin">
               {phrase?.split(" ").map((word, index) => {
                 return (
                   <span
@@ -80,7 +80,7 @@ export default function MyExpertise() {
             </p>
           </div>
           <div ref={description2} className="flex relative gap-50">
-            <p className="md:text-4xl text-2xl font-normal">
+            <p className="md:text-4xl text-2xl font-thin">
               {phrase2?.split(" ").map((word, index) => {
                 return (
                   <span
@@ -101,7 +101,7 @@ export default function MyExpertise() {
             </p>
           </div>
           <div ref={description3} className="flex relative gap-50">
-            <p className="md:text-4xl text-2xl font-normal">
+            <p className="md:text-4xl text-2xl font-thin">
               {phrase3?.split(" ").map((word, index) => {
                 return (
                   <span
@@ -122,7 +122,7 @@ export default function MyExpertise() {
             </p>
           </div>
           <div ref={description4} className="flex relative gap-50">
-            <p className="md:text-4xl text-2xl font-normal">
+            <p className="md:text-4xl text-2xl font-thin">
               {phrase4?.split(" ").map((word, index) => {
                 return (
                   <span
