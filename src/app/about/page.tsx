@@ -46,7 +46,7 @@ export default function About() {
                 A dynamic Full-stack Developer with over 7 years of comprehensive experience in designing, developing, and implementing state-of-the-art software solutions. My track record demonstrates success in optimizing databases, leading end-to-end project development, and smoothly integrating a variety of platforms for optimal functionality. My adeptness encompasses a broad spectrum of programming languages and frameworks, all built upon a robust academic foundation from Singidunum University, where I learned and practiced extensively.
                 </p>
                 <p className="text-2xl font-thin text-white/50 md:text-3xl leading-snug">
-                I genuinely love what I do and work hard to deliver great results every time. I excel in team environments where open communication and mutual respect are valued. Although I primarily work with Next.js, having started with React and then transitioning to Next.js, I bring my best to every project I'm part of.
+                I genuinely love what I do and work hard to deliver great results every time. I excel in team environments where open communication and mutual respect are valued. Although I primarily work with Next.js, having started with React and then transitioning to Next.js, I bring my best to every project I&apos;m part of.
                 </p>
 
 
