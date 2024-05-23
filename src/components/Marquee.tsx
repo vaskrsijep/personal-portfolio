@@ -20,6 +20,15 @@ export default function Marquee() {
 //     });
 //   });
 
+  useEffect(() => {
+    scrollYProgress.on("change", (e) => {
+      textPathRef.current?.setAttribute(
+        "startOffset",
+        -40 + e * 40 + "%"
+      );
+    });
+  }, [scrollYProgress]);
+
   return (
     <div ref={container}>
       <svg viewBox="0 0 250 90">
@@ -32,7 +41,7 @@ export default function Marquee() {
           className="text-xl uppercase text-white"
           style={{ color: "white" }}
         >
-          {[...Array(3)].map((_, i) => {
+          {[...Array(1)].map((_, i) => {
             return (
               <textPath
                 key={i}
