@@ -9,9 +9,13 @@ export default function Contact() {
         <motion.div initial={{opacity: 0}}  whileInView={{opacity: 1}} transition={{duration: 1, delay: 1}} className="absolute top-[50%] left-[0px] translate-x-[0%] translate-y-[-50%] bg-white text-black rounded-r-3xl shadow-white shadow-[0px_0px_50px_rgba(0,0,0,0.1)]">
           <div>
             <div className="flex items-center justify-center gap-3 flex-col px-3 py-3">
+              <a target="_blank" href="https://www.linkedin.com/in/vaskezdes">
               <LinkedinIcon className="w-6 h-6" />
+              </a>
+              <a target="_blank" href="https://github.com/vaskrsijep">
               <GithubIcon className="w-6 h-6" />
-              <Twitter className="w-6 h-6" />
+              </a>
+              {/* <Twitter className="w-6 h-6" /> */}
             </div>
           </div>
         </motion.div>
@@ -33,17 +37,23 @@ export default function Contact() {
             >
               +381 63 73 60 728
             </a>
+            <a
+              href="/contact"
+              className="py-5 px-10 rounded-full border relative hover:border-[#c5fb45]"
+            >
+              Contact Form
+            </a>
           </div>
         </div>
       </div>
-      <div className="flex items-start justify-start gap-1 flex-col font-thin p-[10px]">
+      {/* <div className="flex items-start justify-start gap-1 flex-col font-thin p-[10px]">
         <p>
             Version
         </p>
         <p>
             5/2024
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }

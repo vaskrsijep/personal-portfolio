@@ -22,42 +22,38 @@ export default function Marquee() {
 
   useEffect(() => {
     scrollYProgress.on("change", (e) => {
-      textPathRef.current?.setAttribute(
-        "startOffset",
-        -40 + e * 40 + "%"
-      );
+      textPathRef.current?.setAttribute("startOffset", -40 + e * 40 + "%");
     });
   }, [scrollYProgress]);
 
   return (
-    <div ref={container} className="pt-[10em]">
+    <div ref={container} className="md:pt-[10em]">
+      <div className="sm:flex aria-hidden hidden">
+
       <svg viewBox="0 0 250 90">
         <path
           id="curve"
           fill="none"
           d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
-        />
+          />
         <text
           className="md:text-2xl text-4xl uppercase text-white"
           style={{ color: "white" }}
         >
-          {[...Array(1)].map((_, i) => {
-            return (
+
               <textPath
-                key={i}
                 ref={(ref) => {
                   textPathRef.current = ref;
                 }}
                 href="#curve"
-                startOffset={i * 150 + "%"}
+                startOffset={50 + "%"}
                 fill="white"
-              >
+                >
                 My projects
               </textPath>
-            );
-          })}
         </text>
       </svg>
+          </div>
     </div>
   );
 }
