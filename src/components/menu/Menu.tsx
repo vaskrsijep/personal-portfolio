@@ -97,10 +97,10 @@ export default function Menu() {
         <div className="menu-logo">
           <Link href="/">Vaskrsije Panic</Link>
         </div>
-        <div className="fixed left-[2em] bottom-[2em]">
+        <div className=" left-[2em] bottom-[2em]">
           <p>Based in Novi Sad</p>
         </div>
-        <div className="fixed right-[2em] bottom-[2em]">
+        <div className=" right-[2em] bottom-[2em]">
           <p>Available for hire</p>
         </div>
         <div className="menu-open" onClick={toggleMenu}>

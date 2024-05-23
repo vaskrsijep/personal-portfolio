@@ -5,6 +5,7 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import localFont from 'next/font/local'
 import {Abril_Fatface, Quicksand, Oswald} from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
+import MouseMove from "@/components/mousemove/MouseMove";
 
 const abril = Abril_Fatface({ weight: ["400"], subsets: ["latin"] });
 const quicksand = Quicksand({ weight: ["400", "300", "500", "700", "600"], subsets: ["latin"], display: "swap" });
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" >
       <body className={oswald.className}>
+        <MouseMove/>  
       <Analytics/>
       <Menu />
       <SmoothScrolling>

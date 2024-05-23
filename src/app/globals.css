@@ -14,7 +14,7 @@
   -webkit-font-smoothing: antialiased;}
 
 body {
-  background-color: #000;
+  background-color: #0C0C0C;
   color: #fff;
   font-family: 'Mitera', sans-serif;
 }
@@ -30,4 +30,17 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #fff;
+}
+
+.flair {
+  width: 10px;
+  height: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-color: #c5fb45;
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+
 }
