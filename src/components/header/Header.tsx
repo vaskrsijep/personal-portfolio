@@ -28,7 +28,6 @@ export default function Header() {
         Located in Serbia.
         </h2>
       </div>
-      <div className="overlay z-0 absolute w-full h-screen opacity-5 overflow-hidden"></div>
       <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
         {/* <h1 className="md:text-9xl font-bold leading-loose">VASKRSIJE PANIC</h1>
          */}
