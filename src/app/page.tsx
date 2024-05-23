@@ -1,4 +1,5 @@
 import Marquee from "@/components/Marquee";
+import Contact from "@/components/contact/Contact";
 import CV from "@/components/cv/cv";
 import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
@@ -13,6 +14,7 @@ export default function Home() {
       <div className="w-full h-vh overflow-hidden">
       <Projects />
       <CV/>
+      <Contact />
       </div>
     </div>
   );

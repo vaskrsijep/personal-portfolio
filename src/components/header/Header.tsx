@@ -23,6 +23,11 @@ export default function Header() {
 
   return (
     <motion.div ref={headerRef} className="relative">
+      <div className="absolute top-0 left-[50%] bg-white md:px-10 md:py-5 py-3 px-5 translate-x-[-50%] rounded-b-3xl shadow-white shadow-[0_0px_30px_rgba(0,0,0,0.1)]">
+        <h2 className="text-black md:font-thin uppercase md:text-2xl text-xl">
+        Located in Serbia.
+        </h2>
+      </div>
       <div className="overlay z-0 absolute w-full h-screen opacity-5 overflow-hidden"></div>
       <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
         {/* <h1 className="md:text-9xl font-bold leading-loose">VASKRSIJE PANIC</h1>
