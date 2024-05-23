@@ -30,7 +30,7 @@ export default function Marquee() {
   }, [scrollYProgress]);
 
   return (
-    <div ref={container}>
+    <div ref={container} className="pt-[10em]">
       <svg viewBox="0 0 250 90">
         <path
           id="curve"
@@ -38,7 +38,7 @@ export default function Marquee() {
           d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
         />
         <text
-          className="text-xl uppercase text-white"
+          className="md:text-2xl text-4xl uppercase text-white"
           style={{ color: "white" }}
         >
           {[...Array(1)].map((_, i) => {
@@ -49,7 +49,7 @@ export default function Marquee() {
                   textPathRef.current = ref;
                 }}
                 href="#curve"
-                startOffset={i * 50 + "%"}
+                startOffset={i * 150 + "%"}
                 fill="white"
               >
                 My projects

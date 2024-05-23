@@ -50,7 +50,7 @@ export default function Projects() {
 
   return (
     <div>
-      <div className="py-[10em]">
+      <div className="pt-[10em] pb-[3em]">
         <div>
           {projects.map((project, index) => {
             return (
@@ -79,7 +79,7 @@ export default function Projects() {
           })}
         </div>
           <div className="flex justify-center py-10">
-          <Button text="View All Projects"/>
+          <Button link="/projects" color="bg-white" text="View All Projects"/>
           </div>
         <div></div>
       </div>
