@@ -8,7 +8,7 @@ export default function Contact() {
         <div className="absolute top-0 left-0 w-full h-full bg-[#c5fb45] blur-[200px] opacity-5 -z-0"></div>
         <motion.div initial={{opacity: 0}}  whileInView={{opacity: 1}} transition={{duration: 1, delay: 1}} className="absolute top-[50%] left-[0px] translate-x-[0%] translate-y-[-50%] bg-white text-black rounded-r-3xl shadow-white shadow-[0px_0px_50px_rgba(0,0,0,0.1)]">
           <div>
-            <div className="flex items-center justify-center gap-3 flex-col px-5 py-3">
+            <div className="flex items-center justify-center gap-3 flex-col px-3 py-3">
               <LinkedinIcon className="w-6 h-6" />
               <GithubIcon className="w-6 h-6" />
               <Twitter className="w-6 h-6" />
@@ -35,6 +35,14 @@ export default function Contact() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="flex items-start justify-start gap-1 flex-col font-thin p-[10px]">
+        <p>
+            Version
+        </p>
+        <p>
+            5/2024
+        </p>
       </div>
     </div>
   );

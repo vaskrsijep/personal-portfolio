@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <motion.div ref={headerRef} className="relative">
       <div className="absolute top-0 left-[50%] bg-white md:px-10 md:py-5 py-3 px-5 translate-x-[-50%] rounded-b-3xl shadow-white shadow-[0_0px_30px_rgba(0,0,0,0.1)]">
-        <h2 className="text-black md:font-thin uppercase md:text-2xl text-xl">
+        <h2 className="text-black md:font-thin uppercase md:text-2xl text-lg">
         Located in Serbia.
         </h2>
       </div>
