@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react";
 import {delay, motion} from 'framer-motion';
+import Contact from "@/components/contact/Contact";
 export default function About() {
 
     const containerVariants = {
@@ -29,6 +30,7 @@ export default function About() {
 
     const [hovered, setHovered] = useState(false);
     const [hoveredSkills, setHoveredSkills] = useState(false);
+    const [experienceHovered, setExperienceHovered] = useState(false);
 
     const backendList = ["NodeJS", "ExpressJS", "Django", "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "Python", "Flask", "PHP", "Java", "ArangoDB", ];
     const frontendList = ["ReactJS", "NextJS", "Tailwind CSS", "Bootstrap", "Material UI", "Chakra UI", "VueJS", "NuxtJS", "ViteJS", ];
@@ -74,6 +76,31 @@ export default function About() {
                 <p className="text-2xl font-thin text-white/50 md:text-3xl leading-snug">
                 I genuinely love what I do and work hard to deliver great results every time. I excel in team environments where open communication and mutual respect are valued. Although I primarily work with Next.js, having started with React and then transitioning to Next.js, I bring my best to every project I&apos;m part of.
                 </p>
+
+                <div className="w-full flex items-center justify-between gap-10 relative pt-10">
+
+                <h1 className="md:text-6xl text-5xl font-bold cursor-pointer uppercase" onMouseEnter={() => setExperienceHovered(true)} onMouseLeave={() => setExperienceHovered(false)}>
+                    Experience 
+                </h1>
+                <span className="w-full h-1 bg-[#c5fb45] relative">
+                    <span className={` w-10 h-10 bg-[#c5fb45] absolute left-[0%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-full transition-all duration-500 ease-in-out  ` + (experienceHovered ? 'left-[100%] top-[50%] translate-x-[-50%] translate-y-[-50%]' : 'left-[0%] top-[50%] translate-x-[-50%] translate-y-[-50%]') }>
+
+                    </span>
+                </span>
+                </div>
+
+                <div>
+                <p className="text-2xl font-thin text-white/70 md:text-3xl leading-snug flex gap-2">
+                SolveITX <sup className="text-sm"> (2023 - current)</sup>
+                </p>
+                </div>
+                <div className="border-[#444] border w-full h-[1px]"  />
+                <div>
+                <p className="text-2xl font-thin text-white/70 md:text-3xl leading-snug flex gap-2">
+                Softmetrix <sup className="text-sm"> (2019 - 2019)</sup>
+                </p>
+                </div>
+
 
 
                 <div className="w-full flex items-center justify-between gap-10 relative pt-10">
@@ -154,7 +181,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-
+        <Contact />
         </div>
     );
 }
