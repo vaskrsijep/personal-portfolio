@@ -4,56 +4,15 @@ import { useScroll, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export default function Marquee() {
-  const container = useRef(null);
-  const textPathRef = useRef<SVGTextPathElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "end end"],
-  });
-
-//   useEffect(() => {
-//     scrollYProgress.on("change", (e) => {
-//       texts.current.forEach((text, i) => {
-//         text?.setAttribute("startOffset", -40 + i * 40 + e * 40 + "%");
-//       });
-//     });
-//   });
-
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => {
-      textPathRef.current?.setAttribute("startOffset", -40 + e * 40 + "%");
-    });
-  }, [scrollYProgress]);
+  
 
   return (
-    <div ref={container} className="md:pt-[10em]">
-      <div className="sm:flex aria-hidden hidden">
-
-      <svg viewBox="0 0 250 90">
-        <path
-          id="curve"
-          fill="none"
-          d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68"
-          />
-        <text
-          className="md:text-2xl text-4xl uppercase text-white"
-          style={{ color: "white" }}
-        >
-
-              <textPath
-                ref={(ref) => {
-                  textPathRef.current = ref;
-                }}
-                href="#curve"
-                startOffset={50 + "%"}
-                fill="white"
-                >
-                My projects
-              </textPath>
-        </text>
-      </svg>
-          </div>
+    <div data-scroll data-scroll-section data-scroll-speed=".2" className="w-full py-10 bg-[#004D43] rounded-t-3xl">
+      <div className='h-[20vw] border-t-2 border-b-2 border-zinc-300 font-["Founders_Grotesk"] text-[22vw] w-full flex items-center overflow-hidden uppercase leading-none whitespace-nowrap'>
+        <motion.h1 initial={{x:0}} animate={{x: "-100%"}} transition={{ease: "linear", repeat: Infinity, duration:15}} className="pr-20">My projects</motion.h1>
+        <motion.h1 initial={{x:0}} animate={{x: "-100%"}} transition={{ease: "linear", repeat: Infinity, duration:15}} className="pr-20">My projects</motion.h1>
+        <motion.h1 initial={{x:-5}} animate={{x: "-100%"}} transition={{ease: "linear", repeat: Infinity, duration:15}} className="pr-20">My projects</motion.h1>
+      </div>
     </div>
   );
 }

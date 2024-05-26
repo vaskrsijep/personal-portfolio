@@ -13,7 +13,7 @@ export default function Home() {
       <Marquee />
       <div className="w-full h-vh overflow-hidden">
       <Projects />
-      <CV/>
+      {/* <CV/> */}
       <Contact />
       </div>
     </div>

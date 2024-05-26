@@ -7,9 +7,10 @@
 }
 
 .scaleAnim {
-    transform: scale(1.2, 2);
+    transform: scale(1.5, 1.5);
     line-height: calc(100vh / 3);
 }
+
 
 @media (max-width: 900px) {
     .scaleAnim {

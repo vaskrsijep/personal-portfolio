@@ -1,5 +1,5 @@
 "use client";
-import { projects } from "@/components/projects/Projects";
+import { projects } from "@/lib/constants";
 import {motion } from "framer-motion";
 
 export default function ProjectPage({
