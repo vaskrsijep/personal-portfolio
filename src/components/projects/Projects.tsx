@@ -51,7 +51,7 @@ export default function Projects() {
                     }`}
                   >
                     <Image
-                      src={`/images/${project.image}`}
+                      src={`/images/${project.thumb}`}
                       alt={project.name}
                       width={1900}
                       height={1000}
@@ -90,7 +90,7 @@ export default function Projects() {
                       <ArrowUpRightIcon className="w-20 h-20 absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%] bg-black rounded-full p-5" />
                       </Link>
                       <Image
-                        src={`/images/${project.image}`}
+                        src={`/images/${project.thumb}`}
                         alt={project.name}
                         width={1900}
                         height={1000}

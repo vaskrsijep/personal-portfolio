@@ -4,6 +4,7 @@ import CV from "@/components/cv/cv";
 import Header from "@/components/header/Header";
 import Menu from "@/components/menu/Menu";
 import Projects from "@/components/projects/Projects";
+import ReviewCards from "@/components/reviewCards/ReviewCards";
 import Image from "next/image";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       <Marquee />
       <div className="w-full h-vh overflow-hidden">
       <Projects />
-      {/* <CV/> */}
+      <ReviewCards/>  
       <Contact />
       </div>
     </div>

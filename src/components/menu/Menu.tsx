@@ -93,14 +93,14 @@ export default function Menu() {
   return (
     <div className="menu-container relative overflow-hidden" ref={container}>
         
-      <div className="menu-bar">
+      <div className="menu-bar uppercase text-xl">
         <div className="menu-logo">
           <Link href="/">Vaskrsije Panic</Link>
         </div>
         <div className="fixed right-[2em] bottom-[2em]">
           <p>Available for hire</p>
         </div>
-        <div className="menu-open" onClick={toggleMenu}>
+        <div className="menu-open uppercase text-xl" onClick={toggleMenu}>
           <p>Menu</p>
         </div>
       </div>
@@ -109,7 +109,7 @@ export default function Menu() {
           <div className="menu-logo text-black">
             <Link href="/">Vaskrsije Panic</Link>
           </div>
-          <div className="menu-close" onClick={toggleMenu}>
+          <div className="menu-close uppercase" onClick={toggleMenu}>
             <p>Close</p>
           </div>
         </div>
