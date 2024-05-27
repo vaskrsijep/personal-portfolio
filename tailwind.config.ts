@@ -21,6 +21,7 @@ const config = {
     extend: {
       fontFamily: {
         mitera: ['Mitera', 'sans-serif'],
+        eiko: ['PPEIKO-Heavy', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",

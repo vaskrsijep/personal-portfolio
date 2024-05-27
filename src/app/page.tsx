@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Marquee />
+      {/* <Marquee /> */}
       <div className="w-full h-vh overflow-hidden">
       <Projects />
       <ReviewCards/>  

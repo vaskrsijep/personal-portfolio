@@ -5,10 +5,10 @@ export default function ReviewCards() {
         <div className="card items-center justify-center rounded-xl w-full h-full bg-[#004D43] relative">
           <img
             className="lg:h-[4vw] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
-            src="/images/ochi_logo.svg"
+            src="/images/flag-of-serbia.svg"
             alt="ochi_logo"
           />
-          <div className="absolute bottom-[5%] left-[5%] rounded-2xl px-4 py-1 tracking-tight text-[#cdea68] font-['Neue_Montreal'] outline outline-1 outline-[#cdea68]">
+          <div className="absolute bottom-[5%] left-[5%] rounded-2xl px-4 py-1 tracking-tight text-[#cdea68]  outline outline-1 outline-[#cdea68]">
             ©️2019-2022
           </div>
         </div>
@@ -17,20 +17,20 @@ export default function ReviewCards() {
         <div className="card rounded-xl lg:w-1/2 w-full h-full bg-[#192826] relative">
           <img
             className="lg:h-[5vw] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
-            src="/images/clutch_logo.svg"
+            src="/images/flag-of-serbia.svg"
             alt="clutch logo"
           />
-          <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white font-['Neue_Montreal'] uppercase outline outline-1 outline-white">
+          <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
             Rating 5.0 on Clutch
           </div>
         </div>
         <div className="card relative rounded-xl lg:w-1/2 w-full h-full bg-[#192826]">
           <img
             className="lg:h-[5vw] h-16 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
-            src="/images/futur_logo.png"
+            src="/images/flag-of-serbia.svg"
             alt="futur logo"
           />
-          <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white font-['Neue_Montreal'] uppercase outline outline-1 outline-white">
+          <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
             Business Alumni
           </div>
         </div>

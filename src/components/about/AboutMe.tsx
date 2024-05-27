@@ -52,9 +52,9 @@ export default function MyExpertise() {
 }
 
   return (
-    <div className="flex p-[2em] gap-20 md:flex-row flex-col">
+    <div className="flex p-[2em] gap-20 md:flex-row flex-col my-20 py-36">
       <motion.p initial={{opacity: 0, y: 100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}} className="text-6xl font-bold">ABOUT ME</motion.p>
-      <div className="text-white">
+      <div className="">
         <div
           className="flex justify-center flex-col gap-20  md:px-5"
         >

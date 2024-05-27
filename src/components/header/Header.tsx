@@ -23,11 +23,14 @@ export default function Header() {
 
   return (
     <motion.div ref={headerRef} className="relative">
-      <div className="absolute top-0 left-[50%] bg-white md:px-5 md:py-3 py-2 px-4 translate-x-[-50%] rounded-b-3xl shadow-white shadow-[0_0px_4px_rgba(0,0,0,0.1)]">
-        <h2 className="text-black md:font-thin uppercase md:text-xl text-sm">
+      <motion.div initial={{ y: "-100%"}}  whileInView={{ y:0}} transition={{duration: 1, delay: 1}}>
+
+      <motion.div className="absolute top-0 left-[50%] bg-primary text-primary-foreground md:px-5 md:py-3 py-2 px-4 translate-x-[-50%] rounded-b-3xl shadow-secondary shadow-[0_0px_4px_rgba(0,0,0,0.1)]">
+        <h2 className=" md:font-thin uppercase md:text-xl text-sm">
         Located in Serbia.
         </h2>
-      </div>
+      </motion.div>
+      </motion.div>
       <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
         {/* <h1 className="md:text-9xl font-bold leading-loose">VASKRSIJE PANIC</h1>
          */}
@@ -55,7 +58,7 @@ export default function Header() {
           <motion.span initial={{opacity: 0}}  whileInView={{opacity: 1}} transition={{duration: 1}} className="">
             <ArrowDown
               onClick={handleScrollClick}
-              className="text-[#c5fb45] animate-pulse border border-[#c5fb45] w-10 h-20 rounded-full cursor-pointer"
+              className="text-primary animate-pulse border border-primary w-10 h-20 rounded-full cursor-pointer"
             />
           </motion.span>
         </div>
