@@ -56,7 +56,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
     );
   }
 
-  const imageRef = useRef(null);
+  // const imageRef = useRef(null);
 
   return (
     <motion.div className="relative bg-accent text-accent-foreground">
