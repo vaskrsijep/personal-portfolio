@@ -21,15 +21,15 @@ const ppeiko = localFont({
       weight: '900'
     },
     {
-      path: "../../public/fonts/ppeiko/PPEIKO-Heavy.otf",
+      path: "../../public/fonts/ppeiko/PPEiko-Heavy.otf",
       weight: '700'
     },
     {
-      path: "../../public/fonts/ppeiko/PPEIKO-Thin.otf",
+      path: "../../public/fonts/ppeiko/PPEiko-Thin.otf",
       weight: '400'
     },
     {
-      path: "../../public/fonts/ppeiko/PPEIKO-Medium.otf",
+      path: "../../public/fonts/ppeiko/PPEiko-Medium.otf",
       weight: '500'
     },
   ],
