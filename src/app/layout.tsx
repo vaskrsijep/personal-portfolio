@@ -17,7 +17,7 @@ import MouseMove from "@/components/mousemove/MouseMove";
 const ppeiko = localFont({
   src: [
     {
-      path: "../../public/fonts/ppeiko/PPEIKO-BlackItalic.otf",
+      path: "../../public/fonts/ppeiko/PPEiko-BlackItalic.otf",
       weight: '900'
     },
     {
