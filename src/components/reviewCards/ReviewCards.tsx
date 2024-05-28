@@ -6,7 +6,7 @@ export default function ReviewCards() {
           <img
             className="lg:h-[15vw] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
             src="/images/jss.png"
-            alt="ochi_logo"
+            alt="js logo"
           />
           <div className="absolute bottom-[5%] left-[5%] rounded-2xl px-4 py-1 tracking-tight text-accent  outline outline-1 outline-accent">
             ©2015-2024
@@ -18,7 +18,7 @@ export default function ReviewCards() {
           <img
             className="lg:h-[3vw] absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
             src="/images/univerzitet-singidunum-red.png"
-            alt="clutch logo"
+            alt="singidunum logo"
           />
           <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
             2020-2024
@@ -31,7 +31,7 @@ export default function ReviewCards() {
           <img
             className="lg:h-[3vw] h-16 absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]"
             src="/images/itacademy.png"
-            alt="futur logo"
+            alt="itacademy logo"
           />
           <div className="absolute bottom-[15%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-black  uppercase outline outline-1 outline-black">
             PHP Developer
