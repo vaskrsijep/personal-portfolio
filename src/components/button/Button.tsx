@@ -1,35 +1,55 @@
-"use client";
-import { motion } from "framer-motion";
-import { useState } from "react";
-export default function Button({
-  text,
-  link,
-  color,
-}: {
-  text: string;
-  link: string;
-  color: string;
-}) {
-  //   { link }: { link: string },
-  //   { color }: { color: string }
-  const [hovered, setHovered] = useState(false);
+import React, { useRef, useEffect, useState } from 'react'
+import styles from './style.module.scss'
+import gsap from 'gsap'
+import Magnetic from '../Magnetic/Magnetic'
+
+type RoundedButtonProps = {
+  children: React.ReactNode
+  backgroundColor?: string
+} & React.HTMLAttributes<HTMLDivElement>
+
+const RoundedButton = ({ children, backgroundColor = '#9A3B3B', ...attributes }: RoundedButtonProps) => {
+  const [isHovered, setIsHovered] = useState(false)
+  const circle = useRef<HTMLDivElement>(null)
+  const timeline = useRef(gsap.timeline({ paused: true }))
+
+  useEffect(() => {
+    timeline.current
+      .to(circle.current, { top: '-25%', width: '150%', duration: 0.4, ease: 'power3.in' }, 'enter')
+      .to(circle.current, { top: '-150%', width: '125%', duration: 0.25 }, 'exit')
+  }, [])
+
+  const manageMouseEnter = () => {
+    setIsHovered(true)
+    timeline.current.tweenFromTo('enter', 'exit')
+  }
+
+  const manageMouseLeave = () => {
+    const timeoutId = setTimeout(() => {
+      setIsHovered(false)
+      timeline.current.play()
+    }, 200)
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
+  }
+
   return (
-    <div className="relative">
-      <a
-        href={link}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className={`cursor-pointer px-10 -z-0 relative  py-5 font-normal rounded-full ${color}  uppercase text-xl `}
+    <Magnetic>
+      <div
+        className={styles.roundedButton}
+        style={{ overflow: 'hidden' }}
+        onMouseEnter={manageMouseEnter}
+        onMouseLeave={manageMouseLeave}
+        {...attributes}
       >
-        <motion.span className="relative z-10 text-white">{text}</motion.span>
-      </a>
-        <div
-          className={` ${
-            hovered
-              ? "absolute bottom-[0%] w-20 h-full -right-20  transition-all duration-500 rounded-full"
-              : "absolute bottom-[0%] w-20 h-full -right-0  transition-all duration-500 rounded-full"
-          }`}
-        />
-    </div>
-  );
+        {children}
+        <div ref={circle} style={{ backgroundColor }  } className={styles.circle} />
+      </div>
+    </Magnetic>
+  )
 }
+
+export default RoundedButton
+

@@ -8,6 +8,25 @@ import Button from "../button/Button";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { projects } from "@/lib/constants";
+import gsap from "gsap";
+import RoundedButton from "../button/Button";
+import Project from "../Project";
+
+const scaleAnimation = {
+  initial: { scale: 0, x: "-50%", y: "-50%" },
+  enter: {
+    scale: 1,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.4, ease: [0.76, 0, 0.24, 1] },
+  },
+  closed: {
+    scale: 0,
+    x: "-50%",
+    y: "-50%",
+    transition: { duration: 0.4, ease: [0.32, 0, 0.67, 0] },
+  },
+};
 
 export default function Projects() {
   const useNaavigation = usePathname();
@@ -16,106 +35,151 @@ export default function Projects() {
 
   const [hovered, setHovered] = useState(-1);
 
-  const [active, setActive] = useState(0);
+  // const [active, setActive] = useState(0);
 
   
   const container = useRef(null);
 
+  const [isHovered, setIsHovered] = useState(false);
+  const [modal, setModal] = useState({ active: false, index: 0 });
+  const { active, index } = modal;
+  const modalContainer = useRef<HTMLDivElement>(null);
+  const cursor = useRef<HTMLDivElement>(null);
+  const cursorLabel = useRef<HTMLDivElement>(null);
+
+  let xMoveContainer = useRef<any>(null);
+  let yMoveContainer = useRef<any>(null);
+  let xMoveCursor = useRef<any>(null);
+  let yMoveCursor = useRef<any>(null);
+  let xMoveCursorLabel = useRef<any>(null);
+  let yMoveCursorLabel = useRef<any>(null);
+  useEffect(() => {
+    //Move Container
+    xMoveContainer.current = gsap.quickTo(modalContainer.current, "left", {
+      duration: 0.8,
+      ease: "power3",
+    });
+    yMoveContainer.current = gsap.quickTo(modalContainer.current, "top", {
+      duration: 0.8,
+      ease: "power3",
+    });
+    //Move cursor
+    xMoveCursor.current = gsap.quickTo(cursor.current, "left", {
+      duration: 0.5,
+      ease: "power3",
+    });
+    yMoveCursor.current = gsap.quickTo(cursor.current, "top", {
+      duration: 0.5,
+      ease: "power3",
+    });
+    //Move cursor label
+    xMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "left", {
+      duration: 0.45,
+      ease: "power3",
+    });
+    yMoveCursorLabel.current = gsap.quickTo(cursorLabel.current, "top", {
+      duration: 0.45,
+      ease: "power3",
+    });
+  }, []);
+
+  const moveItems = (x: number, y: number) => {
+    xMoveContainer.current(x);
+    yMoveContainer.current(y);
+    xMoveCursor.current(x);
+    yMoveCursor.current(y);
+    xMoveCursorLabel.current(x);
+    yMoveCursorLabel.current(y);
+  };
+  const manageModal = (
+    active: boolean,
+    index: number,
+    x: number,
+    y: number
+  ) => {
+    moveItems(x, y);
+    setModal({ active, index });
+  };
+
   return (
-    <div data-scroll data-scroll-section data-scroll-speed="-.1">
-      <div className="pt-[10em] pb-[3em]">
-
-        <div>
-          {
-
-          useNaavigation !== "/projects" ? (
-
-          projects.slice(0, 3).map((project, index) => {
-            return (
-              <div key={index}>
-                <div className="relative">
-                  <motion.h1
-                    initial={{ opacity: 0, y: 100 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    viewport={{ once: true }}
-                    onMouseEnter={() => setHovered(index)}
-                    onMouseLeave={() => setHovered(-1)}
-                    className="md:text-6xl text-4xl flex font-bold uppercase md:px-[2em] md:py-10 py-5 px-5 w-full before:w-full before:absolute before:bg-white before:bottom-0 before:left-0 before:h-0 before:transition-all before:duration-200 before:ease-in-out hover:before:h-full hover:before:transition-all hover:before:duration-200 hover:before:ease-in-out hover:text-black before:-z-10 hover:transition-all hover:duration-200 hover:ease-in-out cursor-pointer"
-                  >
-                    {project.name}
-                  </motion.h1>
-                  <div
-                    className={`absolute top-0 md:right-10 right-5 md:w-[500px] md:h-[300px] w-[200px] h-[150px] rotate-12   ${
-                      hovered === index ? project.classLists : "opacity-0"
-                    }`}
-                  >
-                    <Image
-                      src={`/images/${project.thumb}`}
-                      alt={project.name}
-                      width={1900}
-                      height={1000}
-                      className="w-full h-full object-cover p-5"
-                    />
-                  </div>
-                </div>
-                <div></div>
-              </div>
-            );
-          })
-          ) : (
-            projects.map((project, index) => {
+    <main
+      onMouseMove={(e) => {
+        moveItems(e.clientX, e.clientY);
+      }}
+      className=" flex items-start flex-col py-10"
+    >
+      <div>
+        <h1 className="md:text-8xl sm:py-20 sm:px-20 py-10 px-10 font-bold">My projects</h1>
+      </div>
+      <div className="w-full flex flex-col items-center justify-center mb-24">
+        {projects.map((project, index) => {
+          return (
+            <Project
+              index={index}
+              title={project.name}
+              manageModal={manageModal}
+              key={index}
+              tip={project.services}
+              link={project.url}
+              text={project.description}
+            />
+          );
+        })}
+      </div>
+      <>
+        <motion.div
+          ref={modalContainer}
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+          className="h-[300px] w-[500px] fixed top-[50%] left-[50%] bg-white pointer-events-none overflow-hidden z-0 rounded-[30px]"
+        >
+          <div
+            style={{ top: index * -100 + "%" }}
+            className="w-full h-full relative transition-top duration-500 ease-out"
+          >
+            {projects.map((project, index) => {
+              const { thumb, classLists } = project;
               return (
-                <div key={index}>
-                  <div className="relative">
-                    <motion.h1
-                      initial={{ opacity: 0, y: 100 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                      viewport={{ once: true }}
-                      onMouseEnter={() => setHovered(index)}
-                      onMouseLeave={() => setHovered(-1)}
-                      className="md:text-6xl text-4xl flex font-bold uppercase md:px-[2em] md:py-10 py-5 px-5 w-full before:w-full before:absolute before:bg-white before:bottom-0 before:left-0 before:h-0 before:transition-all before:duration-200 before:ease-in-out hover:before:h-full hover:before:transition-all hover:before:duration-200 hover:before:ease-in-out hover:text-black before:-z-10 hover:transition-all hover:duration-200 hover:ease-in-out cursor-pointer"
-                    >
-                      {project.name}
-                    </motion.h1>
-                    <div
-                    onMouseEnter={() => setHovered(index)}
-                    onMouseLeave={() => setHovered(-1)}
-                      className={`absolute top-0 md:right-10 right-5 md:w-[500px] md:h-[300px] w-[200px] h-[150px] rotate-12   ${
-                        hovered === index ? project.classLists : "opacity-0"
-                      }`}
-                    >
-                      <Link href={`/projects/${project.url}`}>
-                      <ArrowUpRightIcon className="w-20 h-20 absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%] bg-black rounded-full p-5" />
-                      </Link>
-                      <Image
-                        src={`/images/${project.thumb}`}
-                        alt={project.name}
-                        width={1900}
-                        height={1000}
-                        className="w-full h-full object-cover p-5"
-                      />
-                    </div>
-                  </div>
-                  <div></div>
+                <div
+                  className="h-full w-full flex items-center justify-center relative"
+                  style={{ backgroundColor: classLists }}
+                  key={`modal_${index}`}
+                >
+                  <Image
+                    src={`/images${thumb}`}
+                    width={1300}
+                    height={1200}
+                    alt="image"
+                    className="h-full w-full absolute top-0 right-0 left-0 bottom-0"
+                  />
                 </div>
               );
-            })
-          )
-        }
-        </div>
-        {useNaavigation !== "/projects" ? (
-          <div className="flex justify-center py-10">
-            <Button
-              link="/projects"
-              color="bg-primary"
-              text="View All Projects"
-            />
+            })}
           </div>
-        ) : null}
-        <div></div>
-      </div>
-    </div>
+        </motion.div>
+        <motion.div
+          ref={cursor}
+          className="w-[80px] h-[80px] bg-black/90 text-white fixed z-0 flex items-center justify-center text-xl font-thin pointer-events-none rounded-full"
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+        ></motion.div>
+        <motion.div
+          ref={cursorLabel}
+          className="w-[80px] h-[80px] bg-black/90 text-white fixed z-0 flex items-center justify-center text-xl pointer-events-none rounded-full"
+          variants={scaleAnimation}
+          initial="initial"
+          animate={active ? "enter" : "closed"}
+        >
+          <ArrowUpRight size={20} />
+        </motion.div>
+        <div className="w-full flex items-center justify-center">
+            <RoundedButton>
+              <Link href="/projects/" className="z-10">View all projects</Link>
+            </RoundedButton>
+        </div>
+      </>
+    </main>
   );
 }

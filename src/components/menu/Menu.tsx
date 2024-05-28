@@ -5,6 +5,7 @@ import "./menu.css";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
+import ButtonList from "../MenuList";
 
 export default function Menu() {
   const container = useRef(null);

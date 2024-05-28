@@ -19,7 +19,7 @@ export const projects = [
       thumb: "/hutlymain.png",
       url: "hutlyestate",
       classLists:
-        "bg-yellow-500 opacity-100 rounded-[5%] shadow-[0_3px_10px_rgba(0,0,0,0.2)] shadow-yellow-500",
+        "#455CE9",
       
     },
 
@@ -51,43 +51,49 @@ export const projects = [
       thumb: "/edgestore.png",
       url: "edgestore",
       classLists:
-        "bg-yellow-500 opacity-100 rounded-[5%] shadow-[0_3px_10px_rgba(0,0,0,0.2)] shadow-yellow-500",
+        "#455CE9",
     },
     {
-      name: "Hutly Estate",
-      description: "Description 1",
-      about: ["About 1", "Industy", "Company size"],
+      name: "Solve ITX",
+      description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
+      about: [
+        "About 1: Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
+        "Industy: IT industry",
+        "Company size: Small team of experienced and skilled professionals."
+      ],
+      gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
+      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
+      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
+      result: "Result",
+      feedback: "Feedback",
+      credits: "//",
+      services: ["Web Design", "Interaction", "Web Development", "SEO"],
+      location: "Banja Luka, Bosnia and Herzegovina",
+      year: "2023",
+      thumb: "/solveitx.png",
+      url: "solveitx",
+      classLists:
+        "#455CE9",
+    },
+    {
+      name: "Euro Exotics",
+      description: "Euro Exotics is a luxury car rental company based in Europe that offers a unique experience of renting exotic and high-end cars. The company is dedicated to providing an exceptional service to its customers, ensuring that they have an unforgettable experience when renting one of their vehicles. With a wide range of cars available, from supercars to luxury sedans, Euro Exotics is the perfect choice for anyone looking to indulge in a luxurious lifestyle.",
+      about: [
+        "Euro Exotics is a luxury car rental company based in Europe that offers a unique experience of renting exotic and high-end cars. The company is dedicated to providing an exceptional service to its customers, ensuring that they have an unforgettable experience when renting one of their vehicles. With a wide range of cars available, from supercars to luxury sedans, Euro Exotics is the perfect choice for anyone looking to indulge in a luxurious lifestyle.",
+      ],
       gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
       feedback: "Feedback",
       credits: "Credits",
-      services: ["Service 1", "Service 2", "Service 3"],
-      location: "Location",
-      year: "Year",
-      thumb: "euroexotics.png",
-      url: "hutlyestate",
+      services: ["Web Design", "Web Development", "Interaction Design", "SEO", "Brand Design"],
+      location: "Europe",
+      year: "2024",
+      thumb: "/euroexotics.png",
+      url: "euroexotics",
       classLists:
-        "bg-yellow-500 opacity-100 rounded-[5%] shadow-[0_3px_10px_rgba(0,0,0,0.2)] shadow-yellow-500",
-    },
-    {
-      name: "Hutly Estate",
-      description: "Description 1",
-      about: ["About 1", "Industy", "Company size"],
-      gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
-      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
-      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
-      result: "Result",
-      feedback: "Feedback",
-      credits: "Credits",
-      services: ["Service 1", "Service 2", "Service 3"],
-      location: "Location",
-      year: "Year",
-      thumb: "euroexotics.png",
-      url: "hutlyestate",
-      classLists:
-        "bg-yellow-500 opacity-100 rounded-[5%] shadow-[0_3px_10px_rgba(0,0,0,0.2)] shadow-yellow-500",
+        "#455CE9",
     },
   ];
   
