@@ -109,7 +109,7 @@ export default function Projects() {
           <div className="flex justify-center py-10">
             <Button
               link="/projects"
-              color="bg-white"
+              color="bg-primary"
               text="View All Projects"
             />
           </div>

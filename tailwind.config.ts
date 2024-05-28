@@ -20,9 +20,9 @@ const config = {
     },
     extend: {
       fontFamily: {
-        mitera: ['Mitera', 'sans-serif'],
-        eiko: ['PPEIKO-Heavy', 'sans-serif'],
+        sans: ["var(--font-ppeiko)", ...fontFamily.sans],
       },
+      
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

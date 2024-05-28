@@ -122,7 +122,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 frontendList.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-secondary rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))
@@ -137,7 +137,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"  } variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 backendList.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-secondary rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-primary rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))
@@ -156,7 +156,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 softSkills.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-secondary rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))
@@ -171,7 +171,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 inProgressLists.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-secondary rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))

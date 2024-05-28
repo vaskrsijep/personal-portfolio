@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Mitera";
-  src: url("/public/fonts/MiteraRegular.ttf");
-}
-
-@font-face {
-  font-family: "PPEIKO-Heavy";
-  src: url("/public/fonts/ppeiko/PPEiko-Heavy.ttf");
-}
-
-
 
 @layer base {
 
@@ -86,6 +75,7 @@
     background-color: #F2ECBE;
     color: hsl(0 0% 0%);
   }
+
 
 
   :root {

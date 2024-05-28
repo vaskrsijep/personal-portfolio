@@ -3,21 +3,38 @@ import "./globals.css";
 import Menu from "@/components/menu/Menu";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import localFont from "next/font/local";
-import { Abril_Fatface, Quicksand, Oswald } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import MouseMove from "@/components/mousemove/MouseMove";
 
-const abril = Abril_Fatface({ weight: ["400"], subsets: ["latin"] });
-const quicksand = Quicksand({
-  weight: ["400", "300", "500", "700", "600"],
-  subsets: ["latin"],
-  display: "swap",
-});
-const oswald = Oswald({
-  weight: ["400", "700", "200", "300", "500", "600"],
-  subsets: ["latin"],
-  display: "swap",
-});
+
+
+// const mitera = localFont({
+//   src: "../../public/fonts/MiteraRegular.ttf",
+//   variable: "--font-mitera",
+//   display: "swap",
+// })
+
+const ppeiko = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ppeiko/PPEIKO-BlackItalic.otf",
+      weight: '900'
+    },
+    {
+      path: "../../public/fonts/ppeiko/PPEIKO-Heavy.otf",
+      weight: '700'
+    },
+    {
+      path: "../../public/fonts/ppeiko/PPEIKO-Thin.otf",
+      weight: '400'
+    },
+    {
+      path: "../../public/fonts/ppeiko/PPEIKO-Medium.otf",
+      weight: '500'
+    },
+  ],
+  variable: "--font-ppeiko",
+})
 
 export const metadata: Metadata = {
   title: "Vaskrsije Panic - Software Engineer",
@@ -31,10 +48,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={oswald.className}>
+      <body className={`${ppeiko.variable} font-sans`}>
         <MouseMove />
         <Analytics />
+        <div className="relative z-20">
         <Menu />
+        </div>
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>
     </html>

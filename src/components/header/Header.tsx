@@ -23,46 +23,40 @@ export default function Header() {
 
   return (
     <motion.div ref={headerRef} className="relative">
-      <motion.div initial={{ y: "-100%"}}  whileInView={{ y:0}} transition={{duration: 1, delay: 1}}>
-
-      <motion.div className="absolute top-0 left-[50%] bg-primary text-primary-foreground md:px-5 md:py-3 py-2 px-4 translate-x-[-50%] rounded-b-3xl shadow-secondary shadow-[0_0px_4px_rgba(0,0,0,0.1)]">
-        <h2 className=" md:font-thin uppercase md:text-xl text-sm">
-        Located in Serbia.
-        </h2>
+      <motion.div
+        initial={{ y: "-100%" }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1, delay: 1 }}
+      >
+        <motion.div className="absolute top-0 left-[50%] bg-primary text-primary-foreground md:px-5 md:py-3 py-2 px-4 translate-x-[-50%] rounded-b-3xl shadow-secondary shadow-[0_0px_4px_rgba(0,0,0,0.1)]">
+          <h2 className=" md:font-thin uppercase md:text-xl text-sm">
+            Located in Serbia.
+          </h2>
+        </motion.div>
       </motion.div>
-      </motion.div>
-      <motion.div className="flex items-center justify-center flex-col w-full h-screen gap-5">
-        {/* <h1 className="md:text-9xl font-bold leading-loose">VASKRSIJE PANIC</h1>
-         */}
-        <div className="flex items-center justify-between md:gap-5 gap-1 font-bold text-5xl md:text-9xl scaleAnim">
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>V</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>A</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>S</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>K</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>R</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>S</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>I</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>J</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>E</motion.span>
-          <span className="mx-2"></span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>P</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>A</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>N</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>I</motion.span>
-          <motion.span initial={{opacity: 0, y: -100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}}>C</motion.span>
+      <div className="w-full h-screen flex items-center justify-center md:flex-row flex-col">
+        <div className="flex items-center justify-center w-full h-full m-0 p-10">
+          <div
+            className={` flex items-center justify-center gap-5 flex-col flex-wrap md:w-1/2 w-full text-center`}
+          >
+            <h1 className="font-mitera leading-relaxed tracking-widest font-bold md:text-9xl text-5xl">
+            CREATING DELIGHTFUL experiences for your business
+            </h1>
+          </div>
         </div>
-        <motion.h1 initial={{opacity: 0, y: 50}}  whileInView={{opacity: 1, y:0}} transition={{duration: 1}} className="md:text-6xl text-2xl leading-loose opacity-50 font-thin">
-          Software Engineer, Front End & App Developer
-        </motion.h1>
-        <div className="mt-10">
-          <motion.span initial={{opacity: 0}}  whileInView={{opacity: 1}} transition={{duration: 1}} className="">
-            <ArrowDown
-              onClick={handleScrollClick}
-              className="text-primary animate-pulse border border-primary w-10 h-20 rounded-full cursor-pointer"
-            />
-          </motion.span>
+        <div className="flex items-end justify-end w-full h-full m-0 p-10">
+          <motion.div className="flex items-end justify-end flex-col md:w-1/3 gap-5 leading-loose">
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+              className="md:text-5xl text-2xl leading-loose  text-right"
+            >
+              Software Engineer, Full-Stack & App Developer
+            </motion.h1>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
       <motion.div>
         <motion.div>
           <AboutMe />
