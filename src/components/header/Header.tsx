@@ -39,9 +39,9 @@ export default function Header() {
           <div
             className={` flex items-center justify-center gap-20 flex-col flex-wrap md:w-1/2 w-full text-center`}
           >
-            <h1 className="font-mitera leading-relaxed tracking-widest font-bold md:text-9xl text-4xl">
-            CREATING DELIGHTFUL experiences for your business
-            </h1>
+            <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} className="font-mitera leading-relaxed tracking-widest font-normal md:text-9xl text-4xl">
+            CREATING DELIGHTFUL <span className="font-black">experiences</span> for <span className="font-bold">your business</span>
+            </motion.h1>
           </div>
         </div>
         <div className="flex items-end justify-end w-full md:h-full m-0 md:px-10 md:py-10 px-5">
@@ -52,7 +52,7 @@ export default function Header() {
               transition={{ duration: 1 }}
               className="md:text-5xl text-2xl leading-loose md:text-right text-center"
             >
-              Software Engineer, Full-Stack & App Developer
+              Software Engineer<span className="font-black">,</span> Full-Stack <span className="font-black">&</span> App Developer
             </motion.h1>
           </motion.div>
         </div>

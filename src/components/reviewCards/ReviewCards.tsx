@@ -1,6 +1,6 @@
 export default function ReviewCards() {
     return (
-        <div className="w-full lg:h-[100vh] h-[150vh] pb-20 bg-fixed bg-zinc-100 flex lg:flex-row flex-col items-center lg:px-24 py-10 gap-4">
+        <div className="w-full lg:h-[100vh] h-[150vh] pb-20 bg-fixed flex lg:flex-row flex-col items-center lg:px-24 py-10 gap-4">
       <div className="card-container h-[55vh] lg:w-1/2 w-full px-5">
         <div className="card items-center justify-center rounded-xl w-full h-full bg-primary relative">
           <img
