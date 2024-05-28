@@ -34,23 +34,23 @@ export default function Header() {
           </h2>
         </motion.div>
       </motion.div>
-      <div className="w-full h-screen flex items-center justify-center md:flex-row flex-col">
-        <div className="flex items-center justify-center w-full h-full m-0 p-10">
+      <div className="w-full h-screen flex items-center justify-center md:flex-row flex-col gap-10">
+        <div className="flex items-center justify-center w-full md:h-full m-0 md:px-10 gap-20">
           <div
-            className={` flex items-center justify-center gap-5 flex-col flex-wrap md:w-1/2 w-full text-center`}
+            className={` flex items-center justify-center gap-20 flex-col flex-wrap md:w-1/2 w-full text-center`}
           >
-            <h1 className="font-mitera leading-relaxed tracking-widest font-bold md:text-9xl text-5xl">
+            <h1 className="font-mitera leading-relaxed tracking-widest font-bold md:text-9xl text-4xl">
             CREATING DELIGHTFUL experiences for your business
             </h1>
           </div>
         </div>
-        <div className="flex items-end justify-end w-full h-full m-0 p-10">
+        <div className="flex items-end justify-end w-full md:h-full m-0 md:px-10 md:py-10 px-5">
           <motion.div className="flex items-end justify-end flex-col md:w-1/3 gap-5 leading-loose">
             <motion.h1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="md:text-5xl text-2xl leading-loose  text-right"
+              className="md:text-5xl text-2xl leading-loose md:text-right text-center"
             >
               Software Engineer, Full-Stack & App Developer
             </motion.h1>
