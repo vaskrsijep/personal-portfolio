@@ -61,7 +61,7 @@ export default function About() {
             <div className="w-10/12 mx-auto flex items-start justify-start gap-10 flex-col py-20">
                 <div className="w-full flex items-center justify-between gap-10 relative">
 
-                <h1 className="md:text-6xl text-5xl font-bold cursor-pointer uppercase" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+                <h1 className="md:text-6xl text-4xl font-bold cursor-pointer uppercase" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
                     Biography 
                 </h1>
                 <span className="w-full h-1 bg-primary relative">
@@ -79,7 +79,7 @@ export default function About() {
 
                 <div className="w-full flex items-center justify-between gap-10 relative pt-10">
 
-                <h1 className="md:text-6xl text-5xl font-bold cursor-pointer uppercase" onMouseEnter={() => setExperienceHovered(true)} onMouseLeave={() => setExperienceHovered(false)}>
+                <h1 className="md:text-6xl text-4xl font-bold cursor-pointer uppercase" onMouseEnter={() => setExperienceHovered(true)} onMouseLeave={() => setExperienceHovered(false)}>
                     Experience 
                 </h1>
                 <span className="w-full h-1 bg-primary relative">
@@ -105,7 +105,7 @@ export default function About() {
 
                 <div className="w-full flex items-center justify-between gap-10 relative pt-10">
 
-                <h1 className="md:text-6xl text-5xl font-bold cursor-pointer uppercase" onMouseEnter={() => setHoveredSkills(true)} onMouseLeave={() => setHoveredSkills(false)}>
+                <h1 className="md:text-6xl text-4xl font-bold cursor-pointer uppercase" onMouseEnter={() => setHoveredSkills(true)} onMouseLeave={() => setHoveredSkills(false)}>
                     Skills 
                 </h1>
                 <span className="w-full h-1 bg-primary relative">
@@ -122,7 +122,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 frontendList.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-primary rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))
@@ -156,7 +156,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 softSkills.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-primary rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))
@@ -171,7 +171,7 @@ export default function About() {
                         <motion.div initial="hidden" whileInView={"visible"} variants={containerVariants} className="flex items-center justify-start gap-3 font-thin text-3xl md:w-9/12 flex-wrap">
                             {
                                 inProgressLists.map((item, index) => (
-                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-white/50 border-white/50 rounded-full" key={index}>
+                                    <motion.p variants={itemVariants} initial="hidden" whileInView={"visible"} className="px-10 py-2 border text-secondary border-primary rounded-full" key={index}>
                                         {item}
                                     </motion.p>
                                 ))

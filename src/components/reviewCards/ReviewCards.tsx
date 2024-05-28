@@ -23,7 +23,7 @@ export default function ReviewCards() {
           <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
             2020-2024
           </div>
-          <div className="absolute bottom-[15%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
+          <div className="absolute bottom-[16%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-white  uppercase outline outline-1 outline-white">
             Software Engineer
           </div>
         </div>
@@ -33,7 +33,7 @@ export default function ReviewCards() {
             src="/images/itacademy.png"
             alt="itacademy logo"
           />
-          <div className="absolute bottom-[15%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-black  uppercase outline outline-1 outline-black">
+          <div className="absolute bottom-[16%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-black  uppercase outline outline-1 outline-black">
             PHP Developer
           </div>
           <div className="absolute bottom-[6%] lg:left-[10%] left-[5%] rounded-2xl px-4 py-1 lg:text-[1vw] tracking-tight text-black  uppercase outline outline-1 outline-black">
