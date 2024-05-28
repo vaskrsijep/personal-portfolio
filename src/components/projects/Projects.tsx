@@ -106,10 +106,10 @@ export default function Projects() {
       onMouseMove={(e) => {
         moveItems(e.clientX, e.clientY);
       }}
-      className=" flex items-start flex-col py-10"
+      className=" flex items-start flex-col pb-20"
     >
       <div>
-        <h1 className="md:text-8xl text-5xl sm:py-20 sm:px-20 py-10 px-10 font-bold">My projects</h1>
+        <h1 className="md:text-8xl text-5xl sm:py-32 sm:px-20 py-10 px-0 font-bold">My projects</h1>
       </div>
       <div className="w-full flex flex-col items-center justify-center mb-24">
         {projects.map((project, index) => {
