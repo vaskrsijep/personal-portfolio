@@ -99,5 +99,51 @@ export const projects = [
       classLists:
         "#455CE9",
     },
+    {
+      name: "Lugar Estate",
+      description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
+      about: [
+        "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
+        "IT industry",
+        "Small team of experienced and skilled professionals."
+      ],
+      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
+      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
+      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
+      result: "Result",
+      feedback: "Feedback",
+      credits: "//",
+      services: ["Web Design", "Interaction", "Web Development", "SEO"],
+      location: "Banja Luka, Bosnia and Herzegovina",
+      year: "2023",
+      thumb: "/lugar.mp4",
+      url: "lugar",
+      link: "www.solveitx.com",
+      classLists:
+        "#455CE9",
+    },
+    {
+      name: "Landwind Template",
+      description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
+      about: [
+        "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
+        "IT industry",
+        "Small team of experienced and skilled professionals."
+      ],
+      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
+      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
+      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
+      result: "Result",
+      feedback: "Feedback",
+      credits: "//",
+      services: ["Web Design", "Interaction", "Web Development", "SEO"],
+      location: "Banja Luka, Bosnia and Herzegovina",
+      year: "2023",
+      thumb: "/landwind.mp4",
+      url: "landwind",
+      link: "www.solveitx.com",
+      classLists:
+        "#455CE9",
+    },
   ];
   
