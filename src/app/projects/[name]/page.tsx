@@ -2,6 +2,7 @@
 import Contact from "@/components/contact/Contact";
 import { projects } from "@/lib/constants";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import { useRef, useState } from "react";
 
 const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
@@ -48,7 +49,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         Project not found
         <a
           href="/projects"
-          className="text-3xl text-[#c5fb45] border-b border-[#c5fb45] py-3"
+          className="text-3xl text-black/50 border-b border-black/50 py-3"
         >
           Go back
         </a>
@@ -59,7 +60,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
   // const imageRef = useRef(null);
 
   return (
-    <motion.div className="relative bg-accent text-accent-foreground">
+    <motion.div className="relative bg-white text-accent-foreground">
       {/* <div className="fixed top-0 left-0 w-full h-full bg-muted blur-[100px] opacity-5 -z-0"></div> */}
       <div className="w-full flex items-center justify-center md:h-[60vh] pt-52 pb-20 relative overflow-hidden">
         <h1 className="md:text-9xl text-6xl flex-wrap px-10 text-center uppercase text-secondary font-bold">
@@ -94,17 +95,25 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         </div>
       </div>
 
-      <div className="bg-white w-full  my-36">
-        <div>
-            <ImageR id={project.thumb}/>
+      <div className="bg-white w-full my-36 py-10 relative">
+
+        <div className="container mx-auto relative">
+          <div className="px-10">
+
+          <Image src={`/images/device-mbp-16-lower-nonotch.png`} width={1920} height={1300} alt="" className="mx-auto z-20 relative w-full "  />
+          <div className="md:w-[71%] w-[56%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
+
+            <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full" />
         </div>
+          </div>
+          </div>
       </div>
 
       <div className="flex items-start justify-between gap-20 md:flex-row flex-col md:py-10 py-5 md:px-20 md:pb-10 w-full px-5 overflow-hidden">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.5 }}
           className=" flex items-start justify-start gap-10 flex-col"
         >
           <h2 className="text-3xl font-bold opacity-30">Description</h2>
@@ -115,7 +124,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 0.5 }}
           className="flex items-start justify-start gap-10 flex-col"
         >
           <h2 className="text-3xl font-bold opacity-30">About</h2>

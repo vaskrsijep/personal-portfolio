@@ -106,12 +106,12 @@ export default function Projects() {
       onMouseMove={(e) => {
         moveItems(e.clientX, e.clientY);
       }}
-      className=" flex items-start flex-col pb-20"
+      className=" flex items-start flex-col pb-20 "
     >
       <div>
-        <h1 className="md:text-8xl text-5xl sm:py-32 sm:px-20 py-10 px-0 font-bold">My projects</h1>
+        <h1 className="md:text-8xl text-5xl sm:py-32 sm:px-20 py-10 px-5 font-bold">My projects</h1>
       </div>
-      <div className="w-full flex flex-col items-center justify-center mb-24">
+      <div className="w-full flex flex-col items-center justify-center mb-24 cursor-none">
         {projects.map((project, index) => {
           return (
             <Project
@@ -132,9 +132,9 @@ export default function Projects() {
           variants={scaleAnimation}
           initial="initial"
           animate={active ? "enter" : "closed"}
-          className="h-[300px] w-[500px] fixed top-[50%] left-[50%] bg-white pointer-events-none overflow-hidden z-0 rounded-[30px]"
+          className=" fixed top-[50%] left-[50%] bg-white pointer-events-none overflow-hidden z-0 rounded-[30px]"
         >
-          <div
+          {/* <div
             style={{ top: index * -100 + "%" }}
             className="w-full h-full relative transition-top duration-500 ease-out"
           >
@@ -156,7 +156,7 @@ export default function Projects() {
                 </div>
               );
             })}
-          </div>
+          </div> */}
         </motion.div>
         <motion.div
           ref={cursor}
@@ -176,7 +176,7 @@ export default function Projects() {
         </motion.div>
         <div className="w-full flex items-center justify-center">
             <RoundedButton>
-              <Link href="/projects/" className="z-10">View all projects</Link>
+              <Link href="/projects/" className="z-10 text-2xl uppercase font-medium">View all projects</Link>
             </RoundedButton>
         </div>
       </>

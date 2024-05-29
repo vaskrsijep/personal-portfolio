@@ -16,7 +16,7 @@ export const projects = [
       services: ["Brand Design", "Web Design", "Web Development", "Interaction Design", "SEO"],
       location: "Belgrade, Serbia",
       year: "2024",
-      thumb: "/hutlymain.png",
+      thumb: "/landwind.mp4",
       url: "hutlyestate",
       classLists:
         "#455CE9",
@@ -48,7 +48,7 @@ export const projects = [
       services: ["Web Development", "Web Design", "Interaction Design", "SEO"],
       location: "Germany",
       year: "2024",
-      thumb: "/edgestore.png",
+      thumb: "/edgegroup.mp4",
       url: "edgestore",
       classLists:
         "#455CE9",
@@ -70,7 +70,7 @@ export const projects = [
       services: ["Web Design", "Interaction", "Web Development", "SEO"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
-      thumb: "/solveitx.png",
+      thumb: "/lugar.mp4",
       url: "solveitx",
       classLists:
         "#455CE9",
@@ -90,7 +90,7 @@ export const projects = [
       services: ["Web Design", "Web Development", "Interaction Design", "SEO", "Brand Design"],
       location: "Europe",
       year: "2024",
-      thumb: "/euroexotics.png",
+      thumb: "/euroexotics.mp4",
       url: "euroexotics",
       classLists:
         "#455CE9",

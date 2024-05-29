@@ -31,6 +31,7 @@ export default function About() {
     const [hovered, setHovered] = useState(false);
     const [hoveredSkills, setHoveredSkills] = useState(false);
     const [experienceHovered, setExperienceHovered] = useState(false);
+    const [educationHovered, setEducationHovered] = useState(false);
 
     const backendList = ["NodeJS", "ExpressJS", "Django", "FastAPI", "GraphQL", "PostgreSQL", "MongoDB", "Python", "Flask", "PHP", "Java", "ArangoDB", ];
     const frontendList = ["ReactJS", "NextJS", "Tailwind CSS", "Bootstrap", "Material UI", "Chakra UI", "VueJS", "NuxtJS", "ViteJS", ];
@@ -76,6 +77,30 @@ export default function About() {
                 <p className="text-2xl font-thin md:text-3xl leading-snug">
                 I genuinely love what I do and work hard to deliver great results every time. I excel in team environments where open communication and mutual respect are valued. Although I primarily work with Next.js, having started with React and then transitioning to Next.js, I bring my best to every project I&apos;m part of.
                 </p>
+
+                <div className="w-full flex items-center justify-between gap-10 relative pt-10">
+
+                <h1 className="md:text-6xl text-4xl font-bold cursor-pointer uppercase" onMouseEnter={() => setEducationHovered(true)} onMouseLeave={() => setEducationHovered(false)}>
+                    Education 
+                </h1>
+                <span className="w-full h-1 bg-primary relative">
+                    <span className={` w-10 h-10 bg-primary absolute left-[0%] top-[50%] translate-x-[-50%] translate-y-[-50%] rounded-full transition-all duration-500 ease-in-out  ` + (educationHovered ? 'left-[100%] top-[50%] translate-x-[-50%] translate-y-[-50%]' : 'left-[0%] top-[50%] translate-x-[-50%] translate-y-[-50%]') }>
+
+                    </span>
+                </span>
+                </div>
+
+                <div>
+                <p className="text-2xl font-thin  md:text-3xl leading-snug flex gap-2">
+                Singidunum University <sup className="text-sm"> (2020 - 2024)</sup>
+                </p>
+                </div>
+                <div className="border-[#444] border w-full h-[1px]"  />
+                <div>
+                <p className="text-2xl font-thin  md:text-3xl leading-snug flex gap-2">
+                ITAcademy <sup className="text-sm"> (2019)</sup>
+                </p>
+                </div>
 
                 <div className="w-full flex items-center justify-between gap-10 relative pt-10">
 
