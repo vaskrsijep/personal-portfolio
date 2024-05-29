@@ -6,16 +6,24 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import ButtonList from "../MenuList";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Menu() {
   const container = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const mainToolBarRef = useRef<HTMLDivElement>(null);
 
   const tl = useRef<gsap.core.Timeline | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+
 
   useGSAP(
     () => {
@@ -91,10 +99,27 @@ export default function Menu() {
     },
   ];
 
+  useEffect(() => {
+    const showAnim = gsap.from(mainToolBarRef.current, { 
+      yPercent: -100,
+      paused: true,
+      duration: 0.2
+    }).progress(1);
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        self.direction === -1 ? showAnim.play() : showAnim.reverse();
+      }
+    });
+  }, []);
+
+
   return (
     <div className="menu-container relative overflow-hidden" ref={container}>
         
-      <div className="menu-bar uppercase text-xl ">
+      <div ref={mainToolBarRef} className="menu-bar uppercase text-xl ">
         <div className="menu-logo">
           <Link href="/">Vaskrsije Panic</Link>
         </div>
