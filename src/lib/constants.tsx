@@ -18,6 +18,7 @@ export const projects = [
       year: "2024",
       thumb: "/landwind.mp4",
       url: "hutlyestate",
+      link: "https://estate-hutly.vercel.app/",
       classLists:
         "#455CE9",
       
@@ -31,7 +32,7 @@ export const projects = [
         "The company operates in a rapidly evolving market where technology plays a crucial role in the way businesses operate. As such, the company recognises the importance of having a website that is user-friendly, visually appealing, and easy to navigate. The website is also designed to be responsive, allowing users to access the company's services and contact information from any device.",
         "The company is located in Germany and has a team of experienced and skilled electricians who provide a wide range of electrical services. The company prides itself on its excellent customer service, competitive pricing and commitment to providing high-quality services.",
       ],
-      gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
+      gallery: ["mobile1.png", "mobile2.png", "mobile3.png", "mobile4.png", "mobile5.png", "mobile6.png"],
       challenges: [
         "Challenge 1: Create a responsive website with a dark mode and a hamburger menu",
         "Challenge 2: Implement a custom scroll animation when scrolling to the footer",
@@ -50,6 +51,7 @@ export const projects = [
       year: "2024",
       thumb: "/edgegroup.mp4",
       url: "edgestore",
+      link: "https://www.edge-info.com/",
       classLists:
         "#455CE9",
     },
@@ -72,6 +74,7 @@ export const projects = [
       year: "2023",
       thumb: "/lugar.mp4",
       url: "solveitx",
+      link: "www.solveitx.com",
       classLists:
         "#455CE9",
     },
@@ -92,6 +95,7 @@ export const projects = [
       year: "2024",
       thumb: "/euroexotics.mp4",
       url: "euroexotics",
+      link: "https://www.euro-exotics.com/",
       classLists:
         "#455CE9",
     },

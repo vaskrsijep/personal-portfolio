@@ -95,13 +95,13 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         </div>
       </div>
 
-      <div className="bg-white w-full my-36 py-10 relative">
+      <div className="bg-[#f5f5f5] w-full my-36 py-10 relative">
 
         <div className="container mx-auto relative">
           <div className="px-10">
 
-          <Image src={`/images/device-mbp-16-lower-nonotch.png`} width={1920} height={1300} alt="" className="mx-auto z-20 relative w-full "  />
-          <div className="md:w-[71%] w-[50%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
+          <Image src={`/images/device-mbp-16-lower-nonotch.png`} width={1920} height={1300} alt="" className="mx-auto z-10 relative w-full "  />
+          <div className="md:w-[71%] w-[51.2%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
 
             <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full" />
         </div>
@@ -139,6 +139,42 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
           </p>
         </motion.div>
       </div>
+
+      <div className="w-full bg-[#f5f5f5] py-10">
+        <div className="container mx-auto">
+      <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full rounded-xl" />
+        </div>
+      </div>
+
+      <div className="w-full py-10">
+        <div className="container mx-auto">
+          <div className="flex items-center justift-between gap-10 md:flex-row flex-col">
+
+              {
+                project.gallery.slice(0, 3).map((image, index) => (
+                  <div className="w-full ">
+                  <Image key={index} src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
+                  </div>
+                ))
+              }
+              </div>
+        </div>
+      </div>
+      <div className="w-full bg-[#f5f5f5] py-10">
+        <div className="container mx-auto">
+          <div className="flex items-center justift-between gap-10 md:flex-row flex-col">
+
+              {
+                project.gallery.slice(3, 6).map((image, index) => (
+                  <div className="w-full ">
+                  <Image key={index} src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
+                  </div>
+                ))
+              }
+              </div>
+        </div>
+      </div>
+      <Contact/>
     </motion.div>
   );
 }
