@@ -146,11 +146,11 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         </div>
       </div>
 
-      <div className="w-full py-10">
+      <div className="w-full md:py-36 py-10">
         <div className="w-full mx-auto">
-          <div className="flex items-center justift-between gap-10 md:flex-row flex-col">
+          <div className="flex items-center justift-between gap-5 md:flex-row flex-col">
               {
-                project.gallery.slice(0, 1).map((image, index) => (
+                project.gallery.slice(0, 2).map((image, index) => (
                   <div key={index} className="w-full ">
                   <Image src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl  "  />
                   </div>
@@ -163,13 +163,9 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
         <div className="container mx-auto">
           <div className="flex items-center justift-between gap-10 md:flex-row flex-col">
 
-              {
-                project.gallery.slice(3, 6).map((image, index) => (
-                  <div key={index} className="w-full ">
-                  <Image src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
+                  <div  className="w-full ">
+                  <Image src={`/images/${project.url}/${project.gallery[1]}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl "  />
                   </div>
-                ))
-              }
               </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ export const projects = [
         "The real estate industry is a dynamic and competitive market, with many players offering similar services. However, Hutly Estate stands out due to its strong online presence, professional staff and commitment to providing excellent customer service.",
         "The agency operates in a rapidly evolving market where technology plays a crucial role in the way businesses operate. As such, Hutly Estate recognises the importance of having a website that is user-friendly, visually appealing, and easy to navigate. The website is also designed to be responsive, allowing users to access the agency's services from any device.",
       ],
-      gallery: ["01_menu.png", "02_tastimonials.png", "03_services.png","04_footer.png", "05_projects.png", "06_projectview.png","07_nextproject.png", "08_servicespage.png", "09_servicespagelists.png","10_serviceview.png", "11_nextservice.png", "12_contactdirect.png", "13_contactform.png", ],
+      gallery: ["00menu.png", "02_tastimonials.png", "03_services.png","04_footer.png", "05_projects.png", "06_projectview.png","07_nextproject.png", "08_servicespage.png", "09_servicespagelists.png","10_serviceview.png", "11_nextservice.png", "12_contactdirect.png", "13_contactform.png", ],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
@@ -63,7 +63,7 @@ export const projects = [
         "IT industry",
         "Small team of experienced and skilled professionals."
       ],
-      gallery: ["mobile1.png", "solveitx.png", "solveitx.png"],
+      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
@@ -84,7 +84,7 @@ export const projects = [
       about: [
         "Euro Exotics is a luxury car rental company based in Europe that offers a unique experience of renting exotic and high-end cars. The company is dedicated to providing an exceptional service to its customers, ensuring that they have an unforgettable experience when renting one of their vehicles. With a wide range of cars available, from supercars to luxury sedans, Euro Exotics is the perfect choice for anyone looking to indulge in a luxurious lifestyle.",
       ],
-      gallery: ["mobile1.png", "solveitx.png", "solveitx.png"],
+      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
