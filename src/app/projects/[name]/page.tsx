@@ -25,7 +25,7 @@ function ImageR({ id }: { id: string }) {
         viewport={{ once: true }}
         onViewportEnter={() => setIsInView(true)}
       >
-        <img className="imageEffect" src={`/images${id}`} alt="" onLoad={() => setIsLoaded(true)} />
+        <Image className="imageEffect" src={`/images${id}`} alt="" onLoad={() => setIsLoaded(true)} />
       </motion.div>
     </section>
   );
@@ -152,8 +152,8 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
 
               {
                 project.gallery.slice(0, 3).map((image, index) => (
-                  <div className="w-full ">
-                  <Image key={index} src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
+                  <div key={index} className="w-full ">
+                  <Image src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
                   </div>
                 ))
               }
@@ -166,8 +166,8 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
 
               {
                 project.gallery.slice(3, 6).map((image, index) => (
-                  <div className="w-full ">
-                  <Image key={index} src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
+                  <div key={index} className="w-full ">
+                  <Image src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl shadow-xl "  />
                   </div>
                 ))
               }
