@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
           <div className="px-10">
 
           <Image src={`/images/device-mbp-16-lower-nonotch.png`} width={1920} height={1300} alt="" className="mx-auto z-20 relative w-full "  />
-          <div className="md:w-[71%] w-[56%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
+          <div className="md:w-[71%] w-[50%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
 
             <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full" />
         </div>
