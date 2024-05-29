@@ -7,7 +7,7 @@ export const projects = [
         "The real estate industry is a dynamic and competitive market, with many players offering similar services. However, Hutly Estate stands out due to its strong online presence, professional staff and commitment to providing excellent customer service.",
         "The agency operates in a rapidly evolving market where technology plays a crucial role in the way businesses operate. As such, Hutly Estate recognises the importance of having a website that is user-friendly, visually appealing, and easy to navigate. The website is also designed to be responsive, allowing users to access the agency's services from any device.",
       ],
-      gallery: ["/hutly/01_menu.png", "/hutly/02_tastimonials.png", "/hutly/03_services.png","/hutly/04_footer.png", "/hutly/05_projects.png", "/hutly/06_projectview.png","/hutly/07_nextproject.png", "/hutly/08_servicespage.png", "/hutly/09_servicespagelists.png","/hutly/10_serviceview.png", "/hutly/11_nextservice.png", "/hutly/12_contactdirect.png", "/hutly/13_contactform.png", ],
+      gallery: ["01_menu.png", "02_tastimonials.png", "03_services.png","04_footer.png", "05_projects.png", "06_projectview.png","07_nextproject.png", "08_servicespage.png", "09_servicespagelists.png","10_serviceview.png", "11_nextservice.png", "12_contactdirect.png", "13_contactform.png", ],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
@@ -16,8 +16,8 @@ export const projects = [
       services: ["Brand Design", "Web Design", "Web Development", "Interaction Design", "SEO"],
       location: "Belgrade, Serbia",
       year: "2024",
-      thumb: "/landwind.mp4",
-      url: "hutlyestate",
+      thumb: "/hutly.mp4",
+      url: "hutly",
       link: "https://estate-hutly.vercel.app/",
       classLists:
         "#455CE9",
@@ -59,11 +59,11 @@ export const projects = [
       name: "Solve ITX",
       description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
       about: [
-        "About 1: Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
-        "Industy: IT industry",
-        "Company size: Small team of experienced and skilled professionals."
+        "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
+        "IT industry",
+        "Small team of experienced and skilled professionals."
       ],
-      gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
+      gallery: ["mobile1.png", "solveitx.png", "solveitx.png"],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
@@ -72,7 +72,7 @@ export const projects = [
       services: ["Web Design", "Interaction", "Web Development", "SEO"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
-      thumb: "/lugar.mp4",
+      thumb: "/solveitx.mp4",
       url: "solveitx",
       link: "www.solveitx.com",
       classLists:
@@ -84,7 +84,7 @@ export const projects = [
       about: [
         "Euro Exotics is a luxury car rental company based in Europe that offers a unique experience of renting exotic and high-end cars. The company is dedicated to providing an exceptional service to its customers, ensuring that they have an unforgettable experience when renting one of their vehicles. With a wide range of cars available, from supercars to luxury sedans, Euro Exotics is the perfect choice for anyone looking to indulge in a luxurious lifestyle.",
       ],
-      gallery: ["solveitx.png", "solveitx.png", "solveitx.png"],
+      gallery: ["mobile1.png", "solveitx.png", "solveitx.png"],
       challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
       solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
       result: "Result",
