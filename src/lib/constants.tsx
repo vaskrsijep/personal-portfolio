@@ -21,6 +21,11 @@ export const projects = [
       link: "https://estate-hutly.vercel.app/",
       classLists:
         "#455CE9",
+      hasAdmin: false,
+      screen: "laptop",
+      hasVideo: true,
+      hasGallery: true,
+      
       
     },
 
