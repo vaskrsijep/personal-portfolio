@@ -1,38 +1,15 @@
 "use client";
 import Contact from "@/components/contact/Contact";
 import { projects } from "@/lib/constants";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
-const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`;
-const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`;
-
-function ImageR({ id }: { id: string }) {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
-
-  return (
-    <section className="imageAnim">
-      <motion.div
-        initial={false}
-        animate={
-          isLoaded && isInView
-            ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
-            : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
-        }
-        transition={{ duration: 0.5, delay: 0.1 }}
-        viewport={{ once: true }}
-        onViewportEnter={() => setIsInView(true)}
-      >
-        <Image className="imageEffect" src={`/images${id}`} alt="" onLoad={() => setIsLoaded(true)} />
-      </motion.div>
-    </section>
-  );
-}
 
 export default function ProjectPage({ params }: { params: { name: string } }) {
   const project = projects.find((project) => project.url === params.name);
+  const currentProjectFromLength = projects.indexOf(project!);
 
   console.log(params.name);
   if (!params.name) {
@@ -56,12 +33,8 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
       </div>
     );
   }
-
-  // const imageRef = useRef(null);
-
   return (
     <motion.div className="relative bg-white text-accent-foreground">
-      {/* <div className="fixed top-0 left-0 w-full h-full bg-muted blur-[100px] opacity-5 -z-0"></div> */}
       <div className="w-full flex items-center justify-center md:h-[60vh] pt-52 pb-20 relative overflow-hidden">
         <h1 className="md:text-9xl text-6xl flex-wrap px-10 text-center uppercase text-secondary font-bold">
           {project.name}
@@ -74,7 +47,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
             <div className="w-[300px] h-[1px] bg-muted "></div>
             <div>
               {project.services.map((service, index) => (
-                <div key={index} className="text-2xl font-light tracking-wide">
+                <div key={index} className="text-2xl font-light tracking-wide w-[300px]">
                   {service}
                 </div>
               ))}
@@ -83,12 +56,12 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
           <div className="md:col-span-1 flex items-start justify-start flex-col gap-3">
             <p className="text-xl text-secondary uppercase">Credits</p>
             <div className="w-[300px] h-[1px] bg-muted "></div>
-            <p className="text-2xl font-light tracking-wide">{project.credits}</p>
+            <p className="text-2xl font-light tracking-wide w-[300px]">{project.credits}</p>
           </div>
           <div className="md:col-span-1 flex items-start justify-start flex-col gap-3">
             <p className="text-xl text-secondary uppercase">Location & Year</p>
-            <div className="w-[300px] h-[1px] bg-muted  flex items-center justify-center flex-row"></div>
-            <p className="text-2xl font-light tracking-wide">
+            <div className="w-[300px] h-[1px] bg-muted flex-wrap flex items-center justify-center flex-row"></div>
+            <p className="text-2xl font-light tracking-wide w-[300px]">
               {project.location}, {project.year}
             </p>
           </div>
@@ -168,6 +141,41 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
                   </div>
               </div>
         </div>
+      </div>
+      <div className="w-full h-screen py-0">
+        <div className="flex items-center justify-center w-full h-full relative">
+            {projects.length > currentProjectFromLength + 1 ? (
+              <Link href={`/projects/${projects[currentProjectFromLength + 1].url}`} className="text-primary text-3xl font-normal text-center flex items-center justify-center flex-col gap-5">
+                <h2 className="md:text-3xl text-2xl font-medium relative z-20">
+                Next Project
+                </h2>
+                <h2 className="md:text-9xl text-5xl font-bold relative z-20">
+                {projects[currentProjectFromLength + 1].name}
+                </h2>
+                <div className="w-full h-full">
+                <Image src={`/images/${projects[currentProjectFromLength + 1].url}/${projects[currentProjectFromLength + 1].gallery[0]}`} width={1920} height={1300} alt={`${projects[currentProjectFromLength + 1].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
+                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70 z-10">
+
+                </div>
+                </div>
+              </Link>
+            ) : (
+              <Link href={`/projects/${projects[0].url}`} className="text-primary flex items-center justify-center flex-col gap-5">
+                <h2 className="md:text-3xl text-2xl font-medium relative z-20">
+                Next Project
+                </h2>
+                <h2 className="md:text-9xl text-5xl font-bold relative z-20">
+                {projects[0].name}
+                </h2>
+                <div className="w-full h-full">
+                <Image src={`/images/${projects[0].url}/${projects[0].gallery[0]}`} width={1920} height={1300} alt={`${projects[0].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
+                <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70 z-10">
+                </div>
+                </div>
+              </Link>
+            )}
+          
+            </div>
       </div>
       <Contact/>
     </motion.div>

@@ -101,6 +101,7 @@ export default function Projects() {
     setModal({ active, index });
   };
 
+
   return (
     <main
       onMouseMove={(e) => {
@@ -112,19 +113,37 @@ export default function Projects() {
         <h1 className="md:text-8xl text-5xl sm:py-32 sm:px-20 py-10 px-5 font-bold">My projects</h1>
       </div>
       <div className="w-full flex flex-col items-center justify-center mb-24 cursor-none">
-        {projects.map((project, index) => {
-          return (
-            <Project
-              index={index}
-              title={project.name}
-              manageModal={manageModal}
-              key={index}
-              tip={project.services}
-              link={project.url}
-              text={project.description}
-            />
-          );
-        })}
+        {
+          useNaavigation === "/projects" ? (
+            projects.map((project, index) => {
+              return (
+                <Project
+                  index={index}
+                  title={project.name}
+                  manageModal={manageModal}
+                  key={index}
+                  tip={project.services}
+                  link={project.url}
+                  text={project.description}
+                />
+              );
+            })
+          ) : (
+            projects.slice(0,3).map((project, index) => {
+              return (
+                <Project
+                  index={index}
+                  title={project.name}
+                  manageModal={manageModal}
+                  key={index}
+                  tip={project.services}
+                  link={project.url}
+                  text={project.description}
+                />
+              );
+            })
+          )
+        }
       </div>
       <>
         <motion.div
@@ -134,29 +153,7 @@ export default function Projects() {
           animate={active ? "enter" : "closed"}
           className=" fixed top-[50%] left-[50%] bg-white pointer-events-none overflow-hidden z-0 rounded-[30px]"
         >
-          {/* <div
-            style={{ top: index * -100 + "%" }}
-            className="w-full h-full relative transition-top duration-500 ease-out"
-          >
-            {projects.map((project, index) => {
-              const { thumb, classLists } = project;
-              return (
-                <div
-                  className="h-full w-full flex items-center justify-center relative"
-                  style={{ backgroundColor: classLists }}
-                  key={`modal_${index}`}
-                >
-                  <Image
-                    src={`/images${thumb}`}
-                    width={1300}
-                    height={1200}
-                    alt="image"
-                    className="h-full w-full absolute top-0 right-0 left-0 bottom-0"
-                  />
-                </div>
-              );
-            })}
-          </div> */}
+
         </motion.div>
         <motion.div
           ref={cursor}
@@ -176,7 +173,7 @@ export default function Projects() {
         </motion.div>
         <div className="w-full flex items-center justify-center">
             <RoundedButton>
-              <Link href="/projects/" className="z-10 text-2xl uppercase font-medium">View all projects</Link>
+              <Link href="/projects/" className="z-10 text-2xl uppercase font-medium">View all projects <sup>({projects.length})</sup></Link>
             </RoundedButton>
         </div>
       </>

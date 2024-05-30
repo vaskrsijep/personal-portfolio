@@ -118,7 +118,7 @@ export const projects = [
       year: "2023",
       thumb: "/lugar.mp4",
       url: "lugar",
-      link: "www.solveitx.com",
+      link: "https://next-real-estate-gilt.vercel.app/",
       classLists:
         "#455CE9",
     },
@@ -141,7 +141,7 @@ export const projects = [
       year: "2023",
       thumb: "/landwind.mp4",
       url: "landwind",
-      link: "www.solveitx.com",
+      link: "https://landwind-beta.vercel.app/",
       classLists:
         "#455CE9",
     },
