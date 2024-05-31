@@ -4,8 +4,12 @@ import RoundedButton from "@/components/button/Button";
 import Link from "next/link";
 import {motion} from 'framer-motion'
 import Contact from "@/components/contact/Contact";
+import { useState } from "react";
 
 export default function Contactt() {
+  const [success, setSuccess] = useState(false);
+  const [validated, setValidated] = useState(false);
+
   async function handleSubmit(event: any) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -20,11 +24,9 @@ export default function Contactt() {
       }
       const responseData = await response.json();
 
-      return (
-        <div className="w-full h-screen fixed top-0 left-0 right-0 bottom-0 bg-black text-white z-50">
-            <h1 className="md:text-9xl text-5xl font-medium">Thank you!</h1>
-        </div>
-      )
+      setSuccess(true);
+
+      event.target.reset();
     } catch (err) {
       alert("Error, please try resubmitting the form");
     }
@@ -32,6 +34,22 @@ export default function Contactt() {
 
   return (
     <div className="flex w-full flex-col items-center justify-center">
+      {
+        success ? <div className="w-full h-screen fixed top-0 left-0 right-0 bottom-0 bg-black text-white z-50 opacity-100">
+        <span className="absolute top-10 right-10 cursor-pointer rounded-[50%] border py-5 px-7 text-white text-6xl m-0 hover:bg-white hover:text-black transition-all duration-300" onClick={() => setSuccess(false)} >&times;</span>
+        <div className="flex items-center justify-center w-full h-full flex-col gap-10">
+          <h1 className="md:text-9xl text-5xl font-medium">Thank you!</h1>
+          <p className="opacity-50 text-xl">I will get back to you shortly.</p>
+        </div>
+      </div> : 
+      <div className="w-full h-screen fixed top-0 left-0 right-0 bottom-0 bg-black text-white -z-50 opacity-0">
+      <span className="absolute top-10 right-10 cursor-pointer rounded-[50%] border py-5 px-7 text-white text-6xl m-0 hover:bg-white hover:text-black transition-all duration-300" onClick={() => setSuccess(false)} >&times;</span>
+      <div className="flex items-center justify-center w-full h-full flex-col gap-10">
+        <h1 className="md:text-9xl text-5xl font-medium">Thank you!</h1>
+        <p className="opacity-50 text-xl">I will get back to you shortly.</p>
+      </div>
+    </div>
+      }
       <div className="w-full md:py-40 pt-40">
         <div className="flex items-start justify-between gap-10 w-full h-full md:px-10 md:py-40 py-0 px-5 md:flex-row flex-col">
           <div className="flex items-center md:justify-start justify-center w-full h-full md:gap-0">
@@ -122,7 +140,9 @@ export default function Contactt() {
                 </div>
               </div>
               <button type="submit" className="absolute bottom-10 right-10">
-                <RoundedButton>Send it</RoundedButton>
+                <RoundedButton>
+                  <p className="text-2xl relative">Send it!</p>
+                </RoundedButton>
               </button>
             </form>
           </div>
