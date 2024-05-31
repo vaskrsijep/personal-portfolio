@@ -165,16 +165,13 @@ export default function Contactt() {
                 Socials
               </h2>
               <Magnetic>
-                <a href="mailto:panicvaskrsije@gmailcom">Instagram</a>
+                <a target="_blank" href="www.instagram.com/v.panic_">Instagram</a>
               </Magnetic>
               <Magnetic>
-                <a href="mailto:panicvaskrsije@gmailcom">Linkedin</a>
+                <a target="_blank" href="https://www.linkedin.com/in/vaskezdes/">Linkedin</a>
               </Magnetic>
               <Magnetic>
-                <a href="mailto:panicvaskrsije@gmailcom">Twitter</a>
-              </Magnetic>
-              <Magnetic>
-                <a href="mailto:panicvaskrsije@gmailcom">Facebook</a>
+                <a target="_blank" href="https://www.facebook.com/vaskrsija.panic.5/">Facebook</a>
               </Magnetic>
             </div>
           </div>
