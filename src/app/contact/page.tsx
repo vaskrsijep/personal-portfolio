@@ -8,7 +8,7 @@ import { useState } from "react";
 
 export default function Contactt() {
   const [success, setSuccess] = useState(false);
-  const [validated, setValidated] = useState(false);
+  const [formValidate, setFormValidate] = useState(false);
 
   async function handleSubmit(event: any) {
     event.preventDefault();

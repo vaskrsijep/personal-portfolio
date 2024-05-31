@@ -5,13 +5,13 @@ const nodemailer = require('nodemailer');
 
 export async function POST(request) {
     const username = process.env.NEXT_PUBLIC_BURNER_USERNAME;
-    const password = process.env.NEXT_PUBLIC_BURNER_PASSWORD;
     const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL;
 
     const formData = await request.formData()
     const name = formData.get('name')
     const email = formData.get('email')
     const message = formData.get('message')
+    const companyName = formData.get('company')
 
     const transporter = nodemailer.createTransport({
         pool: true,
@@ -35,6 +35,7 @@ export async function POST(request) {
             <p>Name: ${name} </p>
             <p>Email: ${email} </p>
             <p>Message: ${message} </p>
+            <p>Company Name: ${companyName} </p>
             `,
         })
 
