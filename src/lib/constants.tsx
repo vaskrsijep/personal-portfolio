@@ -106,49 +106,63 @@ export const projects = [
     },
     {
       name: "Lugar Estate",
-      description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
+      description: "Lugar Estate is a comprehensive real estate platform tailored to streamline property management for a real estate firm based in Banja Luka, Bosnia and Herzegovina. The project focused on creating a robust, user-friendly website to facilitate property listings, client interactions, and service management. Built with Next.js and Tailwind CSS, the platform ensures responsive design and seamless user experience across devices.",
       about: [
-        "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
-        "IT industry",
-        "Small team of experienced and skilled professionals."
+        "Lugar Estate is a real estate platform developed for a firm in Banja Luka, Bosnia and Herzegovina. The project involved creating an intuitive interface for managing property listings, client interactions, and service offerings.",
+        "The real estate firm specializes in high-end properties and needed a website that reflects their premium service standards. The platform's design emphasizes simplicity, elegance, and functionality.",
+        "Key features include a comprehensive property management system, integrated contact forms, and a responsive design to ensure optimal user experience on all devices."
       ],
-      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
-      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
-      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
-      result: "Result",
-      feedback: "Feedback",
-      credits: "//",
-      services: ["Web Design", "Interaction", "Web Development", "SEO"],
+      gallery: ["mobile1.png", "mobile2.png", "lugar1.png"],
+      challenges: [
+        "Challenge 1: Integrate a dynamic property listing system with advanced search functionality.",
+        "Challenge 2: Ensure seamless navigation and user experience across all devices.",
+        "Challenge 3: Implement robust security measures to protect client data."
+      ],
+      solutions: [
+        "Solution 1: Developed a custom property listing module with advanced search and filtering options.",
+        "Solution 2: Utilized responsive design techniques to optimize user experience on mobile and desktop.",
+        "Solution 3: Implemented SSL encryption and secure user authentication processes."
+      ],
+      result: "Result: A modern, responsive real estate platform that enhances client interactions and streamlines property management.",
+      feedback: "The feedback from the client was overwhelmingly positive, highlighting the website's ease of use and professional appearance.",
+      credits: "UI/UX Design: Ana Markovic, Backend Development: Ivan Petrovic",
+      services: ["Web Design", "Web Development", "Interaction Design", "SEO"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
       thumb: "/lugar.mp4",
       url: "lugar",
       link: "https://next-real-estate-gilt.vercel.app/",
-      classLists:
-        "#455CE9",
+      classLists: "#455CE9",
     },
     {
       name: "Landwind Template",
-      description: "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more. The company is dedicated to providing exceptional services to its clients and helping them achieve their online goals. With a team of experienced and skilled professionals, Solve ITX is the perfect partner for any business looking to take its online presence to the next level.",
+      description: "Landwind is a versatile website template designed to cater to various industries, from real estate to corporate businesses. This template offers a clean, modern design with multiple layout options, making it easy to customize for different needs. Built with Next.js and Tailwind CSS, Landwind provides a robust foundation for building responsive, high-performance websites.",
       about: [
-        "Solve ITX is a company that offers a wide range of web services, including web development, digital marketing and more.",
-        "IT industry",
-        "Small team of experienced and skilled professionals."
+        "Landwind is a multipurpose website template created for versatility and ease of customization. Suitable for a range of industries, it provides a solid starting point for building professional websites.",
+        "The template features multiple layout options, including homepages, service pages, and contact forms, ensuring it can be tailored to specific business needs.",
+        "Landwind is built with a focus on performance and usability, ensuring fast load times and a seamless user experience across all devices."
       ],
-      gallery: ["mobile1.png", "mobile2.png", "solveitx.png"],
-      challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
-      solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
-      result: "Result",
-      feedback: "Feedback",
-      credits: "//",
-      services: ["Web Design", "Interaction", "Web Development", "SEO"],
+      gallery: ["mobile1.png", "mobile2.png", "landwind1.png"],
+      challenges: [
+        "Challenge 1: Develop a flexible template that can be easily customized for different industries.",
+        "Challenge 2: Ensure optimal performance and fast load times.",
+        "Challenge 3: Create a modern, clean design that appeals to a wide audience."
+      ],
+      solutions: [
+        "Solution 1: Designed multiple layout options and modular components for easy customization.",
+        "Solution 2: Optimized code and assets to ensure fast load times and high performance.",
+        "Solution 3: Implemented a clean, modern design aesthetic with intuitive navigation."
+      ],
+      result: "Result: A versatile, high-performance template that can be customized for various business needs, providing a strong foundation for professional websites.",
+      feedback: "Clients praised the template's flexibility and the ease with which they could customize it for their specific needs.",
+      credits: "Template Design: Jovana Stojanovic, Frontend Development: Marko Ilic",
+      services: ["Web Design", "Web Development", "Template Customization"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
       thumb: "/landwind.mp4",
       url: "landwind",
       link: "https://landwind-beta.vercel.app/",
-      classLists:
-        "#455CE9",
-    },
+      classLists: "#455CE9",
+    }
   ];
   
