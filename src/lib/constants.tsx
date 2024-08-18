@@ -1,4 +1,30 @@
 export const projects = [
+  {
+    name: "Luxury Car Event",
+    description: "Luxury Sport Car Event je ekskluzivni događaj koji privlači preduzetnike i istinske zaljubljenike u sportske i luksuzne automobile. Ova jedinstvena manifestacija koja se prvi put organizuje u Banjaluci predstavlja kombinaciju vrhunskog adrenalina, umrežavanja i nezaboravnog luksuza. Vlasnike automobila želimo da ugostimo na najljepši mogući način u našem gradu. ",
+    about: [
+      "Svrha je visokokvalitetno druženje, spajanje novih poznanstva, upoznavanje i razgledanje grada Banja Luka, spoj spektakularnih automobila i glamuroznog događaja, kao i mogućnost posjetnicima da dožive manifestaciju toga tipa u Banjaluci.",
+      "Event je privatnog tipa za vlasnike egzotičnih automobila, tako je i učešće ograničeno i samo na poziv moguće. Naš dugoročni plan je da se ova manifestacija održava svake godine.",
+    ],
+    gallery: ["mobile1.png", "mobile2.png", "02desktop.png"],
+    challenges: ["Challenge 1", "Challenge 2", "Challenge 3"],
+    solutions: ["Solutions 1", "Solutions 2", "Solutions 3"],
+    result: "Result",
+    feedback: "Feedback",
+    credits: "//",
+    services: [ "Web Design", "Web Development", "Interaction Design", "SEO"],
+    location: "Banja Luka, Bosnia and Herzegovina",
+    year: "2024",
+    thumb: "/luxurycarevent.mp4",
+    url: "luxurycarevent",
+    link: "https://luxurycarevent.vercel.app/",
+    classLists:
+      "#455CE9",
+    hasAdmin: false,
+    screen: "none",
+    hasVideo: false,
+    hasGallery: false,
+  },
     {
       name: "Hutly Estate",
       description: "Hutly Estate is a web development project I completed for a real estate agency based in Belgrade, Serbia. The project involved designing and developing a modern responsive website that showcases their properties, services and contact information. The website is built using React, NextJS and Tailwind CSS. The project required me to work closely with the client to understand their needs and develop a solution that meets their expectations.",
@@ -25,8 +51,6 @@ export const projects = [
       screen: "laptop",
       hasVideo: true,
       hasGallery: true,
-      
-      
     },
 
     {
@@ -125,7 +149,7 @@ export const projects = [
       ],
       result: "Result: A modern, responsive real estate platform that enhances client interactions and streamlines property management.",
       feedback: "The feedback from the client was overwhelmingly positive, highlighting the website's ease of use and professional appearance.",
-      credits: "UI/UX Design: Ana Markovic, Backend Development: Ivan Petrovic",
+      credits: "",
       services: ["Web Design", "Web Development", "Interaction Design", "SEO"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
@@ -155,7 +179,7 @@ export const projects = [
       ],
       result: "Result: A versatile, high-performance template that can be customized for various business needs, providing a strong foundation for professional websites.",
       feedback: "Clients praised the template's flexibility and the ease with which they could customize it for their specific needs.",
-      credits: "Template Design: Jovana Stojanovic, Frontend Development: Marko Ilic",
+      credits: "",
       services: ["Web Design", "Web Development", "Template Customization"],
       location: "Banja Luka, Bosnia and Herzegovina",
       year: "2023",
