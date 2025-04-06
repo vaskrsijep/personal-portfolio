@@ -187,6 +187,30 @@ export const projects = [
       url: "landwind",
       link: "https://landwind-beta.vercel.app/",
       classLists: "#455CE9",
+    },
+    {
+      name: "XOXO Bar",
+      description: "XOXO.",
+      about: [
+        
+      ],
+      gallery: ["mobile1.png", "mobile2.png", "landwind1.png"],
+      challenges: [
+       
+      ],
+      solutions: [
+        
+      ],
+      result: "Result: A versatile, high-performance template that can be customized for various business needs, providing a strong foundation for professional websites.",
+      feedback: "Clients praised the template's flexibility and the ease with which they could customize it for their specific needs.",
+      credits: "",
+      services: ["Web Design", "Web Development", "Template Customization"],
+      location: "Banja Luka, Bosnia and Herzegovina",
+      year: "2023",
+      thumb: "/landwind.mp4",
+      url: "xoxobar",
+      link: "https://xoxobar.vercel.app/",
+      classLists: "#455CE9",
     }
   ];
   

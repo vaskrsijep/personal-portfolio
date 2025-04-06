@@ -173,7 +173,7 @@ export default function Projects() {
         </motion.div>
         <div className="w-full flex items-center justify-center">
             <RoundedButton>
-              <p className="z-10 text-2xl uppercase font-medium">View all projects <sup>({projects.length})</sup></p>
+              <Link href="/projects" className="z-10 text-2xl uppercase font-medium">View all projects <sup>({projects.length})</sup></Link>
             </RoundedButton>
         </div>
       </>

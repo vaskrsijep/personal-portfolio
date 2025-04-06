@@ -33,7 +33,7 @@ const Project: React.FC<ProjectProps> = ({
 
       </div>
       <div>
-        <p className="text-xl font- transition-all duration-400 sm:group-hover:translate-x-10 group-hover:opacity-50">{text}</p>
+        <p className="text-xl max-w-5xl transition-all duration-400 sm:group-hover:translate-x-10 group-hover:opacity-50">{text}</p>
       </div>
     </Link>
   );
