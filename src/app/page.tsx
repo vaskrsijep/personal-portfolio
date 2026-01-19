@@ -17,7 +17,7 @@ export default function Home() {
       <div className="w-full h-vh overflow-hidden">
       <Projects />
       <CTAQuote />
-      <HorizontalScroll />
+      {/* <HorizontalScroll /> */}
       <Experience />
       <ReviewCards/>  
       <Testimonials />

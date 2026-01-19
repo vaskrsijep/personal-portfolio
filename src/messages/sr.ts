@@ -65,6 +65,9 @@ const srMessages = {
   },
   testimonials: {
     heading: "Šta Kažu Klijenti",
+    description: "Tokom godina, imao sam privilegiju da radim sa sjajnim klijentima koji mi veruju da oživim njihove vizije. Evo šta kažu o našoj saradnji.",
+    countSingle: "Testimonial",
+    countPlural: "Testimonijala",
     testimonial1: {
       company: "Edge Store",
       text: "Odličan posao! Saradnja je bila glatka i laka. Brzo smo se usaglasili oko zahteva i isporuka je bila brza i profesionalna.",

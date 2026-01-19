@@ -1,9 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
@@ -37,21 +36,31 @@ export default function Testimonials() {
     },
   ];
 
+  const testimonialsCount = testimonials.length;
+
   return (
     <div className="w-full py-32 px-5 md:px-20 bg-[#f5f5f5]">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-5xl md:text-7xl font-bold uppercase mb-16 text-center"
+          className="text-center mb-16"
         >
-          {t("heading")}
-        </motion.h2>
+          <h2 className="text-5xl md:text-7xl font-bold uppercase mb-6">
+            {t("heading")}
+          </h2>
+          <p className="text-xl md:text-2xl text-black/70 max-w-3xl mx-auto mb-4">
+            {t("description")}
+          </p>
+          <p className="text-lg text-black/50">
+            {testimonialsCount} {testimonialsCount === 1 ? t("countSingle") : t("countPlural")}
+          </p>
+        </motion.div>
 
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Pagination, Autoplay]}
           spaceBetween={30}
           slidesPerView={1}
           breakpoints={{
@@ -62,7 +71,6 @@ export default function Testimonials() {
               slidesPerView: 3,
             },
           }}
-          navigation
           pagination={{ clickable: true }}
           autoplay={{
             delay: 5000,
@@ -82,7 +90,7 @@ export default function Testimonials() {
               >
                 <div className="flex-1 mb-6">
                   <p className="text-xl md:text-2xl font-light leading-relaxed text-black/80">
-                    "{testimonial.text}"
+                    &ldquo;{testimonial.text}&rdquo;
                   </p>
                 </div>
                 <div className="border-t border-black/10 pt-6">
@@ -103,27 +111,6 @@ export default function Testimonials() {
       </div>
 
       <style jsx global>{`
-        .testimonials-swiper .swiper-button-next,
-        .testimonials-swiper .swiper-button-prev {
-          color: #455ce9;
-          width: 50px;
-          height: 50px;
-          background: white;
-          border-radius: 50%;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          transition: all 0.3s ease;
-        }
-        .testimonials-swiper .swiper-button-next:hover,
-        .testimonials-swiper .swiper-button-prev:hover {
-          background: #455ce9;
-          color: white;
-          transform: scale(1.1);
-        }
-        .testimonials-swiper .swiper-button-next::after,
-        .testimonials-swiper .swiper-button-prev::after {
-          font-size: 20px;
-          font-weight: bold;
-        }
         .testimonials-swiper .swiper-pagination {
           bottom: -50px !important;
         }

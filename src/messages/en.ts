@@ -65,6 +65,9 @@ const enMessages = {
   },
   testimonials: {
     heading: "What Clients Say",
+    description: "Over the years, I've had the privilege of working with amazing clients who trust me to bring their visions to life. Here's what they have to say about our collaboration.",
+    countSingle: "Testimonial",
+    countPlural: "Testimonials",
     testimonial1: {
       company: "Edge Store",
       text: "Excellent work! The collaboration was smooth and easy. We quickly aligned on requirements and the delivery was fast and professional.",
