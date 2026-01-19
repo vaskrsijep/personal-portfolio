@@ -6,6 +6,54 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState } from "react";
 
+const getImagePath = (projectUrl: string, imageName: string) => {
+  // Use solveitx images as generic placeholder for projects without images
+  const placeholderProjects = [
+    "maximonrealestate",
+    "montat",
+    "lawyertemplate",
+    "peakitx",
+    "panicdigital",
+    "vunaperestoran",
+    "nadatorte",
+    "pekaramiki",
+    "frizerskisaloniliev",
+    "forestrywebsite",
+    "salonauta",
+    "nopanicanalysis"
+  ];
+  
+  if (placeholderProjects.includes(projectUrl)) {
+    return `/images/solveitx/${imageName}`;
+  }
+  
+  return `/images/${projectUrl}/${imageName}`;
+};
+
+const getVideoPath = (projectUrl: string, videoPath: string) => {
+  // Use solveitx video as generic placeholder for projects without videos
+  const placeholderProjects = [
+    "maximonrealestate",
+    "montat",
+    "lawyertemplate",
+    "peakitx",
+    "panicdigital",
+    "vunaperestoran",
+    "nadatorte",
+    "pekaramiki",
+    "frizerskisaloniliev",
+    "forestrywebsite",
+    "salonauta",
+    "nopanicanalysis"
+  ];
+  
+  if (placeholderProjects.includes(projectUrl)) {
+    return "/videos/solveitx.mp4";
+  }
+  
+  return `/videos${videoPath}`;
+};
+
 
 export default function ProjectPage({ params }: { params: { name: string } }) {
   const project = projects.find((project) => project.url === params.name);
@@ -76,7 +124,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
           <Image src={`/images/device-mbp-16-lower-nonotch.png`} width={1920} height={1300} alt="" className="mx-auto z-10 relative w-full "  />
           <div className="md:w-[71%] w-[51.2%] h-[90%]  overflow-hidden absolute top-[47%] left-[50%] translate-x-[-50%] translate-y-[-50%] md:rounded-t-3xl">
 
-            <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full" />
+            <video src={getVideoPath(project.url, project.thumb)} autoPlay loop muted playsInline className=" object-cover h-full w-full" />
         </div>
           </div>
           </div>
@@ -115,7 +163,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
 
       <div className="w-full bg-[#f5f5f5] py-10">
         <div className="container mx-auto">
-      <video src={`/videos${project.thumb}`} autoPlay loop muted playsInline className=" object-cover h-full w-full rounded-xl" />
+      <video src={getVideoPath(project.url, project.thumb)} autoPlay loop muted playsInline className=" object-cover h-full w-full rounded-xl" />
         </div>
       </div>
 
@@ -125,7 +173,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
               {
                 project.gallery.slice(0, 2).map((image, index) => (
                   <div key={index} className="w-full ">
-                  <Image src={`/images/${project.url}/${image}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl  "  />
+                  <Image src={getImagePath(project.url, image)} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl  "  />
                   </div>
                 ))
               }
@@ -137,7 +185,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
           <div className="flex items-center justift-between gap-10 md:flex-row flex-col">
 
                   <div  className="w-full ">
-                  <Image src={`/images/${project.url}/${project.gallery[1]}`} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl "  />
+                  <Image src={getImagePath(project.url, project.gallery[1])} width={1920} height={1300} alt="" className="mx-auto z-0 relative w-full rounded-xl "  />
                   </div>
               </div>
         </div>
@@ -153,7 +201,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
                 {projects[currentProjectFromLength + 1].name}
                 </h2>
                 <div className="w-full h-full">
-                <Image src={`/images/${projects[currentProjectFromLength + 1].url}/${projects[currentProjectFromLength + 1].gallery[0]}`} width={1920} height={1300} alt={`${projects[currentProjectFromLength + 1].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
+                <Image src={getImagePath(projects[currentProjectFromLength + 1].url, projects[currentProjectFromLength + 1].gallery[0])} width={1920} height={1300} alt={`${projects[currentProjectFromLength + 1].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70 z-10">
 
                 </div>
@@ -168,7 +216,7 @@ export default function ProjectPage({ params }: { params: { name: string } }) {
                 {projects[0].name}
                 </h2>
                 <div className="w-full h-full">
-                <Image src={`/images/${projects[0].url}/${projects[0].gallery[0]}`} width={1920} height={1300} alt={`${projects[0].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
+                <Image src={getImagePath(projects[0].url, projects[0].gallery[0])} width={1920} height={1300} alt={`${projects[0].name}`} className="absolute -top-10 left-0 w-full h-full object-cover -z-0" />
                 <div className="absolute top-0 left-0 w-full h-full bg-white opacity-70 z-10">
                 </div>
                 </div>

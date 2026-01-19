@@ -5,6 +5,7 @@ import SmoothScrolling from "@/components/SmoothScrolling";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
 import MouseMove from "@/components/mousemove/MouseMove";
+import IntlProviderClient from "@/components/IntlProviderClient";
 
 
 
@@ -51,10 +52,12 @@ export default function RootLayout({
       <body className={`${ppeiko.variable} font-sans`}>
         <MouseMove />
         <Analytics />
-        <div className="relative z-20">
-        <Menu />
-        </div>
-        <SmoothScrolling>{children}</SmoothScrolling>
+        <IntlProviderClient>
+          <div className="relative z-20">
+            <Menu />
+          </div>
+          <SmoothScrolling>{children}</SmoothScrolling>
+        </IntlProviderClient>
       </body>
     </html>
   );

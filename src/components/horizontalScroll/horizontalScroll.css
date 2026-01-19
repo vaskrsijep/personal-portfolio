@@ -1,0 +1,39 @@
+/* Prevent horizontal scrollbar */
+.horizontal-scroll-section {
+  overflow-x: hidden !important;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Smooth performance optimizations */
+.horizontal-scroll-section * {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+/* GPU acceleration */
+.horizontal-scroll-section [style*="transform"],
+.horizontal-scroll-section [style*="will-change"] {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Mobile responsive - stack vertically */
+@media (max-width: 768px) {
+  .horizontal-scroll-section {
+    height: auto !important;
+    overflow-y: visible;
+  }
+  
+  .horizontal-scroll-section .cards-container {
+    flex-direction: column;
+    height: auto !important;
+  }
+  
+  .horizontal-scroll-section .card {
+    width: 100% !important;
+    margin-bottom: 2rem;
+  }
+}

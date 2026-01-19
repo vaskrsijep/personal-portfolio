@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, ArrowUpRight, ArrowUpRightIcon } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ArrowUpRightIcon, LayoutGrid, List } from "lucide-react";
 import "./projects.css";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -11,6 +11,7 @@ import { projects } from "@/lib/constants";
 import gsap from "gsap";
 import RoundedButton from "../button/Button";
 import Project from "../Project";
+import ProjectGrid from "./ProjectGrid";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -30,6 +31,7 @@ const scaleAnimation = {
 
 export default function Projects() {
   const useNaavigation = usePathname();
+  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
 
   console.log(useNaavigation);
 
@@ -102,6 +104,37 @@ export default function Projects() {
   };
 
 
+  const sortedProjects = [...projects].sort(
+    (a, b) => Number(b.year) - Number(a.year)
+  );
+
+  const getImagePath = (projectUrl: string, imageName: string) => {
+    const placeholderProjects = [
+      "maximonrealestate",
+      "montat",
+      "lawyertemplate",
+      "peakitx",
+      "panicdigital",
+      "vunaperestoran",
+      "nadatorte",
+      "pekaramiki",
+      "frizerskisaloniliev",
+      "forestrywebsite",
+      "salonauta",
+      "nopanicanalysis"
+    ];
+    
+    if (placeholderProjects.includes(projectUrl)) {
+      return `/images/solveitx/${imageName}`;
+    }
+    
+    return `/images/${projectUrl}/${imageName}`;
+  };
+
+  const displayProjects = useNaavigation === "/projects" 
+    ? sortedProjects 
+    : sortedProjects.slice(0, 3);
+
   return (
     <main
       onMouseMove={(e) => {
@@ -109,41 +142,62 @@ export default function Projects() {
       }}
       className=" flex items-start flex-col pb-20 "
     >
-      <div>
-        <h1 className="md:text-8xl text-5xl sm:py-32 sm:px-20 py-10 px-5 font-bold">My projects</h1>
+      <div className="w-full flex items-center justify-between sm:px-20 px-5 sm:py-32 py-10">
+        <h1 className="md:text-8xl text-5xl font-bold">My projects</h1>
+        {useNaavigation === "/projects" && (
+          <div className="flex items-center gap-2 bg-white rounded-full p-2 shadow-lg border border-black/5">
+            <button
+              onClick={() => setViewMode("list")}
+              className={`p-3 rounded-full transition-all duration-300 ${
+                viewMode === "list"
+                  ? "bg-primary text-white"
+                  : "text-black/60 hover:bg-black/5"
+              }`}
+              aria-label="List view"
+            >
+              <List size={20} />
+            </button>
+            <button
+              onClick={() => setViewMode("grid")}
+              className={`p-3 rounded-full transition-all duration-300 ${
+                viewMode === "grid"
+                  ? "bg-primary text-white"
+                  : "text-black/60 hover:bg-black/5"
+              }`}
+              aria-label="Grid view"
+            >
+              <LayoutGrid size={20} />
+            </button>
+          </div>
+        )}
       </div>
-      <div className="w-full flex flex-col items-center justify-center mb-24 cursor-none">
-        {
-          useNaavigation === "/projects" ? (
-            projects.map((project, index) => {
-              return (
-                <Project
-                  index={index}
-                  title={project.name}
-                  manageModal={manageModal}
-                  key={index}
-                  tip={project.services}
-                  link={project.url}
-                  text={project.description}
-                />
-              );
-            })
-          ) : (
-            projects.slice(0,3).map((project, index) => {
-              return (
-                <Project
-                  index={index}
-                  title={project.name}
-                  manageModal={manageModal}
-                  key={index}
-                  tip={project.services}
-                  link={project.url}
-                  text={project.description}
-                />
-              );
-            })
-          )
-        }
+      <div className={`w-full ${viewMode === "grid" ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-5 md:px-20" : "flex flex-col items-center justify-center mb-24 cursor-none"}`}>
+        {viewMode === "grid" ? (
+          displayProjects.map((project, index) => (
+            <ProjectGrid
+              key={index}
+              index={index}
+              title={project.name}
+              link={project.url}
+              text={project.description}
+              year={project.year}
+              imageUrl={getImagePath(project.url, project.gallery[0] || "mobile1.png")}
+            />
+          ))
+        ) : (
+          displayProjects.map((project, index) => (
+            <Project
+              index={index}
+              title={project.name}
+              manageModal={manageModal}
+              key={index}
+              tip={project.services}
+              link={project.url}
+              text={project.description}
+              year={project.year}
+            />
+          ))
+        )}
       </div>
       <>
         <motion.div

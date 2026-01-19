@@ -17,6 +17,17 @@
     cursor: pointer;
 }
 
+.menu-logo a {
+    position: relative;
+    display: inline-block;
+    min-width: 150px;
+}
+
+.menu-logo a span {
+    transition: opacity 0.3s ease-in-out;
+    display: inline-block;
+}
+
 .menu-close p {
     color: #E2C799;
     cursor: pointer;

@@ -7,6 +7,8 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import ButtonList from "../MenuList";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLocaleStore } from "@/lib/store/useLocaleStore";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,8 +16,13 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Menu() {
   const container = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const locale = useLocaleStore((state) => state.locale);
+  const setLocale = useLocaleStore((state) => state.setLocale);
+  const tHeader = useTranslations("header");
 
   const mainToolBarRef = useRef<HTMLDivElement>(null);
+  const logoRef = useRef<HTMLAnchorElement>(null);
 
   const tl = useRef<gsap.core.Timeline | null>(null);
 
@@ -113,6 +120,15 @@ export default function Menu() {
         self.direction === -1 ? showAnim.play() : showAnim.reverse();
       }
     });
+
+    // Scroll detection for logo change
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
 
@@ -121,10 +137,43 @@ export default function Menu() {
         
       <div ref={mainToolBarRef} className="menu-bar uppercase text-xl ">
         <div className="menu-logo">
-          <Link href="/">Vaskrsije Panic</Link>
+          <Link href="/" ref={logoRef} className="transition-all duration-300">
+            <span className={isScrolled ? "opacity-0 absolute" : "opacity-100"}>
+              Vaskrsije Panic
+            </span>
+            <span className={isScrolled ? "opacity-100" : "opacity-0 absolute"}>
+              VP
+            </span>
+          </Link>
         </div>
-        <div className="menu-open uppercase text-xl " onClick={toggleMenu}>
-          <p>Menu</p>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 text-sm">
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              className={`px-3 py-1.5 rounded-md font-medium transition-all duration-300 ${
+                locale === "en"
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-black/60 hover:text-black"
+              }`}
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              onClick={() => setLocale("sr")}
+              className={`px-3 py-1.5 rounded-md font-medium transition-all duration-300 ${
+                locale === "sr"
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-black/60 hover:text-black"
+              }`}
+            >
+              SR
+            </button>
+          </div>
+          <div className="menu-open uppercase text-xl " onClick={toggleMenu}>
+            <p>Menu</p>
+          </div>
         </div>
       </div>
       <div className="menu-overlay text-xl">
@@ -132,8 +181,34 @@ export default function Menu() {
           <div className="menu-logo uppercase">
             <Link href="/">Vaskrsije Panic</Link>
           </div>
-          <div className="menu-close uppercase" onClick={toggleMenu}>
-            <p>Close</p>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 text-sm">
+              <button
+                type="button"
+                onClick={() => setLocale("en")}
+                className={`px-3 py-1.5 rounded-md font-medium transition-all duration-300 ${
+                  locale === "en"
+                    ? "bg-white text-primary"
+                    : "bg-transparent text-white/70 hover:text-white"
+                }`}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                onClick={() => setLocale("sr")}
+                className={`px-3 py-1.5 rounded-md font-medium transition-all duration-300 ${
+                  locale === "sr"
+                    ? "bg-white text-primary"
+                    : "bg-transparent text-white/70 hover:text-white"
+                }`}
+              >
+                SR
+              </button>
+            </div>
+            <div className="menu-close uppercase" onClick={toggleMenu}>
+              <p>Close</p>
+            </div>
           </div>
         </div>
         <div className="menu-copy">

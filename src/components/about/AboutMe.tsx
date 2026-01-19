@@ -1,7 +1,9 @@
 import { useRef } from "react";
 import "./myexpertise.css";
 import { useInView, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 export default function MyExpertise() {
+  const t = useTranslations("aboutMeSection");
   const MyExpertiseList = [
     {
       name: "Software Development",
@@ -23,10 +25,10 @@ export default function MyExpertise() {
     },
   ];
 
-  const phrase = "Hello! I'm a 27-year-old software engineer based in the beautiful city of Novi Sad. With a passion for technology and creativity, I bring innovative ideas to life through both front-end and back-end development as a freelance full-stack developer.";
-  const phrase2 = "In addition to my technical skills, I am adept at design and video editing, ensuring a seamless and visually appealing user experience. My diverse skill set allows me to tackle a variety of projects, from building dynamic web applications to crafting engaging multimedia content.";
-  const phrase3 = "As a dedicated professional, I am constantly exploring new technologies and methodologies to stay at the forefront of the industry. My goal is to deliver exceptional results that exceed client expectations and make a lasting impact.";
-  const phrase4 = "Feel free to browse through my portfolio to see some of the exciting projects I have worked on. I look forward to the opportunity to collaborate and bring your ideas to life!";
+  const phrase = t("phrase1");
+  const phrase2 = t("phrase2");
+  const phrase3 = t("phrase3");
+  const phrase4 = t("phrase4");
 
   const description = useRef(null);
   const description2 = useRef(null);
@@ -53,7 +55,14 @@ export default function MyExpertise() {
 
   return (
     <div className="flex p-[2em] gap-20 md:flex-row flex-col my-10 py-10  text-black md:max-w-7xl mx-auto">
-      <motion.p initial={{opacity: 0, y: 100}}  whileInView={{opacity: 1, y:0}} transition={{duration: 0.5}} className="text-6xl font-bold">ABOUT ME</motion.p>
+      <motion.p
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-6xl font-bold"
+      >
+        {t("heading")}
+      </motion.p>
       <div className="">
         <div
           className="flex justify-center flex-col gap-20  md:px-5"
